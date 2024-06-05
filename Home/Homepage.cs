@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Vanilla.StatusCd;
+
 
 namespace Vanilla
 {
@@ -69,17 +69,6 @@ namespace Vanilla
                 Salterauseradm = value;
             }
         }
-        public ToolStripMenuItem AlterUserDefaul
-        {
-            get
-            {
-                return Salteraruser;
-            }
-            set
-            {
-                Salteraruser = value;
-            }
-        }
         public ToolStripMenuItem Logoff
         {
             get
@@ -135,17 +124,6 @@ namespace Vanilla
                 Badduser = value;
             }
         }
-        public Button LayoutCd
-        {
-            get
-            {
-                return Baddcd;
-            }
-            set
-            {
-                Baddcd = value;
-            }
-        }
         public Button ViewLog
         {
             get
@@ -179,55 +157,8 @@ namespace Vanilla
                 Bvisualizaitens = value;
             }
         }
-        public Button ViewEnd
-        {
-            get
-            {
-                return Bvisualizacd;
-            }
-            set
-            {
-                Bvisualizacd = value;
-            }
-        }
-        public Button CdStatus
-        {
-            get
-            {
-                return Bstatuscd;
-            }
-            set
-            {
-                Bstatuscd = value;
-            }
-        }
-        public Button InsItem
-        {
-            get
-            {
-                return BInsereItem;
-            }
-            set
-            {
-                BInsereItem = value;
-            }
-        }
-        public DataGridView Janelas
-        {
-            get { return dataGridWindows; }
-            set { dataGridWindows = value; }
-        }
-        public Button MsgOpen
-        {
-            get
-            {
-                return Bmsg;
-            }
-            set
-            {
-                Bmsg = value;
-            }
-        }
+      
+
         #endregion
 
         #region Menu
@@ -265,11 +196,7 @@ namespace Vanilla
         private void StrCadUs(object sender, EventArgs e)
         {
             controller.StartCadUser();
-        }
-        private void AddCd(object sender, EventArgs e)
-        {
-            controller.StartCadCd();
-        }
+        }  
         #endregion
 
         #region Visualização
@@ -285,22 +212,8 @@ namespace Vanilla
         {
             controller.StartViewItens();
         }
-        private void AcessaTableCd(object sender, EventArgs e)
-        {
-            controller.StartViewEnd();
-        }
-        private void StatusCd(object sender, EventArgs e)
-        {
-            controller.StartViewCd();
-        }
         #endregion
-
-        #region Operações
-        private void InserirItens(object sender, EventArgs e)
-        {
-            controller.StartInsItem();
-        }
-        #endregion
+       
 
         public void Exibir()
         {
@@ -341,19 +254,6 @@ namespace Vanilla
         {
             Sobre sobre = new Sobre();
             sobre.Show();
-        }
-
-        private void ChamaChat(object sender, EventArgs e)
-        {
-            controller.StartOpenMsg();
-        }
-
-        private void ReabrirJanela(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                controller.Seleiconajanela(dataGridWindows.Rows[e.RowIndex].Cells[0].Value.ToString());
-            }
         }
     }
 }

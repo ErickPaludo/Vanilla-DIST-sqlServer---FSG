@@ -32,9 +32,6 @@
     <Compile Update="Cadastro de usuarios\Editar usuarios\AlterarUsersGeral.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Chat\ViewMsg.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="CustomElements\Error\ErrorBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -42,9 +39,6 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Home\Homepage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="InserirItens\InserirItem.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Login\LoginFront.cs">
@@ -57,9 +51,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="CadastraCd\Tabela\TabelaEnderecos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="StatusCd\StatusdoCd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UsersOn\UserOn.cs">

@@ -30,22 +30,15 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             Ccademp = new Button();
             Bcaditem = new Button();
             Badduser = new Button();
-            Baddcd = new Button();
             menuStrip1 = new MenuStrip();
             Snameuser = new ToolStripMenuItem();
             Suseron = new ToolStripMenuItem();
             Salterauseradm = new ToolStripMenuItem();
-            Salteraruser = new ToolStripMenuItem();
             Slogout = new ToolStripMenuItem();
             Sexit = new ToolStripMenuItem();
-            Sconfig = new ToolStripMenuItem();
-            Sconfigbanco = new ToolStripMenuItem();
-            Ssobresistema = new ToolStripMenuItem();
             Bvisualizaemp = new Button();
             toolTip1 = new ToolTip(components);
             flowLayoutPanel1 = new FlowLayoutPanel();
@@ -57,26 +50,14 @@
             flowLayoutPanel2 = new FlowLayoutPanel();
             Blogs = new Button();
             Bvisualizaitens = new Button();
-            Bvisualizacd = new Button();
-            Bstatuscd = new Button();
-            flowLayoutPanel3 = new FlowLayoutPanel();
-            Llogistica = new Label();
-            flowLayoutPanel5 = new FlowLayoutPanel();
-            BInsereItem = new Button();
             pictureBox1 = new PictureBox();
-            Bmsg = new Button();
-            dataGridWindows = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
             menuStrip1.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             containercad.SuspendLayout();
             containerlabelcad.SuspendLayout();
             flowLayoutPanel4.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
-            flowLayoutPanel3.SuspendLayout();
-            flowLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridWindows).BeginInit();
             SuspendLayout();
             // 
             // Ccademp
@@ -133,39 +114,21 @@
             Badduser.UseVisualStyleBackColor = false;
             Badduser.Click += StrCadUs;
             // 
-            // Baddcd
-            // 
-            Baddcd.BackColor = Color.MidnightBlue;
-            Baddcd.Cursor = Cursors.Hand;
-            Baddcd.FlatAppearance.BorderColor = Color.Black;
-            Baddcd.FlatAppearance.BorderSize = 0;
-            Baddcd.FlatStyle = FlatStyle.Flat;
-            Baddcd.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            Baddcd.ForeColor = SystemColors.ButtonHighlight;
-            Baddcd.Location = new Point(522, 47);
-            Baddcd.Name = "Baddcd";
-            Baddcd.Size = new Size(167, 114);
-            Baddcd.TabIndex = 3;
-            Baddcd.Text = "Endereços Cd";
-            Baddcd.TextAlign = ContentAlignment.MiddleLeft;
-            Baddcd.UseVisualStyleBackColor = false;
-            Baddcd.Click += AddCd;
-            // 
             // menuStrip1
             // 
             menuStrip1.BackColor = Color.DarkSlateBlue;
             menuStrip1.Dock = DockStyle.None;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { Snameuser, Sconfig });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { Snameuser });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.RenderMode = ToolStripRenderMode.Professional;
-            menuStrip1.Size = new Size(163, 24);
+            menuStrip1.Size = new Size(67, 24);
             menuStrip1.TabIndex = 12;
             menuStrip1.Text = "menuStrip1";
             // 
             // Snameuser
             // 
-            Snameuser.DropDownItems.AddRange(new ToolStripItem[] { Suseron, Salterauseradm, Salteraruser, Slogout, Sexit });
+            Snameuser.DropDownItems.AddRange(new ToolStripItem[] { Suseron, Salterauseradm, Slogout, Sexit });
             Snameuser.ForeColor = SystemColors.ButtonHighlight;
             Snameuser.Name = "Snameuser";
             Snameuser.Size = new Size(59, 20);
@@ -189,15 +152,6 @@
             Salterauseradm.Text = "Alterar outros usuários";
             Salterauseradm.Click += AlterarQualqueruser;
             // 
-            // Salteraruser
-            // 
-            Salteraruser.BackColor = Color.DarkSlateBlue;
-            Salteraruser.ForeColor = SystemColors.ButtonHighlight;
-            Salteraruser.Name = "Salteraruser";
-            Salteraruser.Size = new Size(193, 22);
-            Salteraruser.Text = "Alterar Conta";
-            Salteraruser.Click += AlterarUser;
-            // 
             // Slogout
             // 
             Slogout.BackColor = Color.DarkSlateBlue;
@@ -215,33 +169,6 @@
             Sexit.Size = new Size(193, 22);
             Sexit.Text = "Sair";
             Sexit.Click += Exit;
-            // 
-            // Sconfig
-            // 
-            Sconfig.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            Sconfig.DropDownItems.AddRange(new ToolStripItem[] { Sconfigbanco, Ssobresistema });
-            Sconfig.ForeColor = SystemColors.ButtonHighlight;
-            Sconfig.Name = "Sconfig";
-            Sconfig.Size = new Size(96, 20);
-            Sconfig.Text = "Configurações";
-            // 
-            // Sconfigbanco
-            // 
-            Sconfigbanco.BackColor = Color.DarkSlateBlue;
-            Sconfigbanco.ForeColor = SystemColors.ButtonHighlight;
-            Sconfigbanco.Name = "Sconfigbanco";
-            Sconfigbanco.Size = new Size(159, 22);
-            Sconfigbanco.Text = "Endereço Banco";
-            Sconfigbanco.Click += EndereçoBanco;
-            // 
-            // Ssobresistema
-            // 
-            Ssobresistema.BackColor = Color.DarkSlateBlue;
-            Ssobresistema.ForeColor = SystemColors.ButtonHighlight;
-            Ssobresistema.Name = "Ssobresistema";
-            Ssobresistema.Size = new Size(159, 22);
-            Ssobresistema.Text = "Sobre";
-            Ssobresistema.Click += VerSobre;
             // 
             // Bvisualizaemp
             // 
@@ -267,11 +194,9 @@
             flowLayoutPanel1.Controls.Add(containercad);
             flowLayoutPanel1.Controls.Add(flowLayoutPanel4);
             flowLayoutPanel1.Controls.Add(flowLayoutPanel2);
-            flowLayoutPanel1.Controls.Add(flowLayoutPanel3);
-            flowLayoutPanel1.Controls.Add(flowLayoutPanel5);
             flowLayoutPanel1.Location = new Point(25, 48);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(868, 517);
+            flowLayoutPanel1.Size = new Size(868, 345);
             flowLayoutPanel1.TabIndex = 14;
             // 
             // containercad
@@ -280,7 +205,6 @@
             containercad.Controls.Add(Ccademp);
             containercad.Controls.Add(Bcaditem);
             containercad.Controls.Add(Badduser);
-            containercad.Controls.Add(Baddcd);
             containercad.Location = new Point(3, 3);
             containercad.Name = "containercad";
             containercad.Size = new Size(784, 163);
@@ -329,8 +253,6 @@
             flowLayoutPanel2.Controls.Add(Blogs);
             flowLayoutPanel2.Controls.Add(Bvisualizaemp);
             flowLayoutPanel2.Controls.Add(Bvisualizaitens);
-            flowLayoutPanel2.Controls.Add(Bvisualizacd);
-            flowLayoutPanel2.Controls.Add(Bstatuscd);
             flowLayoutPanel2.Location = new Point(3, 211);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Size = new Size(865, 125);
@@ -372,87 +294,6 @@
             Bvisualizaitens.UseVisualStyleBackColor = false;
             Bvisualizaitens.Click += ConsultarItens;
             // 
-            // Bvisualizacd
-            // 
-            Bvisualizacd.BackColor = Color.Green;
-            Bvisualizacd.Cursor = Cursors.Hand;
-            Bvisualizacd.FlatAppearance.BorderColor = Color.Black;
-            Bvisualizacd.FlatAppearance.BorderSize = 0;
-            Bvisualizacd.FlatStyle = FlatStyle.Flat;
-            Bvisualizacd.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            Bvisualizacd.ForeColor = SystemColors.ButtonHighlight;
-            Bvisualizacd.Location = new Point(522, 3);
-            Bvisualizacd.Name = "Bvisualizacd";
-            Bvisualizacd.Size = new Size(167, 114);
-            Bvisualizacd.TabIndex = 18;
-            Bvisualizacd.Text = "Endereços Cd";
-            Bvisualizacd.TextAlign = ContentAlignment.MiddleLeft;
-            Bvisualizacd.UseVisualStyleBackColor = false;
-            Bvisualizacd.Click += AcessaTableCd;
-            // 
-            // Bstatuscd
-            // 
-            Bstatuscd.BackColor = Color.Green;
-            Bstatuscd.Cursor = Cursors.Hand;
-            Bstatuscd.FlatAppearance.BorderColor = Color.Black;
-            Bstatuscd.FlatAppearance.BorderSize = 0;
-            Bstatuscd.FlatStyle = FlatStyle.Flat;
-            Bstatuscd.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            Bstatuscd.ForeColor = SystemColors.ButtonHighlight;
-            Bstatuscd.Location = new Point(695, 3);
-            Bstatuscd.Name = "Bstatuscd";
-            Bstatuscd.Size = new Size(167, 114);
-            Bstatuscd.TabIndex = 19;
-            Bstatuscd.Text = "Status CD";
-            Bstatuscd.TextAlign = ContentAlignment.MiddleLeft;
-            Bstatuscd.UseVisualStyleBackColor = false;
-            Bstatuscd.Click += StatusCd;
-            // 
-            // flowLayoutPanel3
-            // 
-            flowLayoutPanel3.Controls.Add(Llogistica);
-            flowLayoutPanel3.Location = new Point(3, 342);
-            flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new Size(784, 33);
-            flowLayoutPanel3.TabIndex = 18;
-            // 
-            // Llogistica
-            // 
-            Llogistica.AutoSize = true;
-            Llogistica.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            Llogistica.ForeColor = SystemColors.ActiveCaptionText;
-            Llogistica.Location = new Point(3, 0);
-            Llogistica.Name = "Llogistica";
-            Llogistica.Size = new Size(228, 32);
-            Llogistica.TabIndex = 0;
-            Llogistica.Text = "Processos Logisticos";
-            // 
-            // flowLayoutPanel5
-            // 
-            flowLayoutPanel5.Controls.Add(BInsereItem);
-            flowLayoutPanel5.Location = new Point(3, 381);
-            flowLayoutPanel5.Name = "flowLayoutPanel5";
-            flowLayoutPanel5.Size = new Size(784, 125);
-            flowLayoutPanel5.TabIndex = 19;
-            // 
-            // BInsereItem
-            // 
-            BInsereItem.BackColor = Color.Orange;
-            BInsereItem.Cursor = Cursors.Hand;
-            BInsereItem.FlatAppearance.BorderColor = Color.Black;
-            BInsereItem.FlatAppearance.BorderSize = 0;
-            BInsereItem.FlatStyle = FlatStyle.Flat;
-            BInsereItem.Font = new Font("Impact", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            BInsereItem.ForeColor = SystemColors.ButtonHighlight;
-            BInsereItem.Location = new Point(3, 3);
-            BInsereItem.Name = "BInsereItem";
-            BInsereItem.Size = new Size(167, 114);
-            BInsereItem.TabIndex = 5;
-            BInsereItem.Text = "Inserir item";
-            BInsereItem.TextAlign = ContentAlignment.MiddleLeft;
-            BInsereItem.UseVisualStyleBackColor = false;
-            BInsereItem.Click += InserirItens;
-            // 
             // pictureBox1
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -465,67 +306,6 @@
             pictureBox1.TabIndex = 15;
             pictureBox1.TabStop = false;
             // 
-            // Bmsg
-            // 
-            Bmsg.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            Bmsg.BackgroundImage = (Image)resources.GetObject("Bmsg.BackgroundImage");
-            Bmsg.FlatStyle = FlatStyle.Popup;
-            Bmsg.Location = new Point(899, 515);
-            Bmsg.Name = "Bmsg";
-            Bmsg.Size = new Size(50, 50);
-            Bmsg.TabIndex = 16;
-            Bmsg.UseVisualStyleBackColor = true;
-            Bmsg.Click += ChamaChat;
-            // 
-            // dataGridWindows
-            // 
-            dataGridWindows.AllowUserToAddRows = false;
-            dataGridWindows.AllowUserToDeleteRows = false;
-            dataGridWindows.AllowUserToResizeColumns = false;
-            dataGridWindows.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            dataGridWindows.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridWindows.BorderStyle = BorderStyle.None;
-            dataGridWindows.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
-            dataGridWindows.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridWindows.ColumnHeadersVisible = false;
-            dataGridWindows.Columns.AddRange(new DataGridViewColumn[] { Column1 });
-            dataGridWindows.Cursor = Cursors.Hand;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.DarkSlateBlue;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.Padding = new Padding(5);
-            dataGridViewCellStyle1.SelectionBackColor = Color.SlateBlue;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            dataGridWindows.DefaultCellStyle = dataGridViewCellStyle1;
-            dataGridWindows.GridColor = Color.FromArgb(128, 128, 255);
-            dataGridWindows.ImeMode = ImeMode.On;
-            dataGridWindows.Location = new Point(923, 26);
-            dataGridWindows.Name = "dataGridWindows";
-            dataGridWindows.ReadOnly = true;
-            dataGridWindows.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.ControlLight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridWindows.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridWindows.RowHeadersVisible = false;
-            dataGridWindows.RowTemplate.Height = 30;
-            dataGridWindows.Size = new Size(138, 554);
-            dataGridWindows.TabIndex = 17;
-            dataGridWindows.CellClick += ReabrirJanela;
-            // 
-            // Column1
-            // 
-            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Column1.HeaderText = "";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
             // Homepage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -533,8 +313,6 @@
             AutoValidate = AutoValidate.EnableAllowFocusChange;
             BackColor = Color.White;
             ClientSize = new Size(1061, 577);
-            Controls.Add(Bmsg);
-            Controls.Add(dataGridWindows);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(menuStrip1);
             Controls.Add(pictureBox1);
@@ -552,11 +330,7 @@
             flowLayoutPanel4.ResumeLayout(false);
             flowLayoutPanel4.PerformLayout();
             flowLayoutPanel2.ResumeLayout(false);
-            flowLayoutPanel3.ResumeLayout(false);
-            flowLayoutPanel3.PerformLayout();
-            flowLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridWindows).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -566,16 +340,11 @@
         private Button Ccademp;
         private Button Bcaditem;
         private Button Badduser;
-        private Button Baddcd;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem Snameuser;
-        private ToolStripMenuItem Salteraruser;
         private ToolStripMenuItem Slogout;
         private ToolStripMenuItem Sexit;
         private ToolStripMenuItem Salterauseradm;
-        private ToolStripMenuItem Sconfig;
-        private ToolStripMenuItem Sconfigbanco;
-        private ToolStripMenuItem Ssobresistema;
         private Button Bvisualizaemp;
         private ToolTip toolTip1;
         private FlowLayoutPanel flowLayoutPanel1;
@@ -589,14 +358,5 @@
         private FlowLayoutPanel containercad;
         private ToolStripMenuItem Suseron;
         private PictureBox pictureBox1;
-        private Button Bvisualizacd;
-        private FlowLayoutPanel flowLayoutPanel3;
-        private Label Llogistica;
-        private FlowLayoutPanel flowLayoutPanel5;
-        private Button BInsereItem;
-        private Button Bstatuscd;
-        private Button Bmsg;
-        private DataGridView dataGridWindows;
-        private DataGridViewTextBoxColumn Column1;
     }
 }

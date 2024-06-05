@@ -21,10 +21,7 @@ namespace Vanilla
         {
             get; set;
         }
-        ToolStripMenuItem AlterUserDefaul
-        {
-            get; set;
-        }
+
         ToolStripMenuItem Logoff
         {
             get; set;
@@ -45,10 +42,6 @@ namespace Vanilla
         {
             get; set;
         }
-        Button LayoutCd
-        {
-            get; set;
-        }
         Button ViewLog
         {
             get; set;
@@ -60,26 +53,6 @@ namespace Vanilla
         Button ViewItens
         {
             get; set;
-        }
-        Button ViewEnd
-        {
-            get; set;
-        }
-        Button CdStatus
-        {
-            get; set;
-        }
-        Button InsItem
-        {
-            get; set;
-        }
-        DataGridView Janelas
-        {
-            get; set;
-        }
-        Button MsgOpen
-        {
-            get; set;
-        }
+        }   
     }
 }
