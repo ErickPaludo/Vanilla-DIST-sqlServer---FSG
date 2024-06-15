@@ -241,7 +241,6 @@
             cpfText.Size = new Size(148, 23);
             cpfText.TabIndex = 1;
             cpfText.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
-            cpfText.Leave += ValidarCPF;
             // 
             // telfBox
             // 

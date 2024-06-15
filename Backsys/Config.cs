@@ -23,21 +23,8 @@ namespace Vanilla
             sw.Close();
         }
         public string Lerdados() //lê o endereço do banco
-        {
-            string endereco = "";
-
-            try
-            {
-                StreamReader sr = new StreamReader(arquivo);
-                endereco = sr.ReadLine();
-                sr.Close();
-            }
-            catch
-            {
-                StreamWriter sw = File.CreateText(arquivo);
-            }
-           
-            return endereco;
+        {        
+            return "Server=DESKTOP-N75LCG3\\SQLEXPRESS;Database=VNL;Integrated Security=True;";
         }
     }
 }

@@ -41,7 +41,7 @@ namespace Vanilla
                 {
                     if (passBox.Text == confPassBox.Text)
                     {
-                        clasusuarios.AlterUserC(emailBox.Text, telfBox.Text, telfBox2.Text, passBox.Text); //Manda as informações para a classe, para fazer a gravação
+                     //   clasusuarios.AlterUserC(emailBox.Text, telfBox.Text, telfBox2.Text, passBox.Text); //Manda as informações para a classe, para fazer a gravação
                         if (encaminhar.Checked == true) //verifica se o envio para email está ativo                        {
                             if (emailBox.Text == oldemail) //Envia email referente a alteração
                             {

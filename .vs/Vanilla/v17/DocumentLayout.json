@@ -1,38 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\",
+  "WorkspaceRootPath": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\backsys\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:backsys\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist-sqlserver---fsg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\home\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\cadastro de usuarios\\userclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastro de usuarios\\userclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\backsys\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:backsys\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\cadastro de usuarios\\adicionarusuariosfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastro de usuarios\\adicionarusuariosfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\cadastro de usuarios\\adicionarusuariosfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastro de usuarios\\adicionarusuariosfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist-sqlserver---fsg\\home\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\home\\homemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\homemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\chat\\viewmsg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:chat\\viewmsg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\home\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\chat\\viewmsg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:chat\\viewmsg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\licencaslogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:licencaslogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist\\home\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\home\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:home\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\cadastro de usuarios\\editar usuarios\\alterarusercfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastro de usuarios\\editar usuarios\\alterarusercfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\login\\loginclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:login\\loginclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,125 +51,117 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Database.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Backsys\\Database.cs",
-              "RelativeDocumentMoniker": "Backsys\\Database.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Backsys\\Database.cs",
-              "RelativeToolTip": "Backsys\\Database.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAswBwAAAAIAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAApwAsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T00:15:46.024Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LicencasLogin.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\LicencasLogin.cs",
-              "RelativeDocumentMoniker": "LicencasLogin.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\LicencasLogin.cs",
-              "RelativeToolTip": "LicencasLogin.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwCMAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T00:13:47.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ViewMsg.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Chat\\ViewMsg.cs",
-              "RelativeDocumentMoniker": "Chat\\ViewMsg.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Chat\\ViewMsg.cs",
-              "RelativeToolTip": "Chat\\ViewMsg.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAQwBgAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T22:49:38.949Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ViewMsg.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Chat\\ViewMsg.cs",
-              "RelativeDocumentMoniker": "Chat\\ViewMsg.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Chat\\ViewMsg.cs [Projeto]",
-              "RelativeToolTip": "Chat\\ViewMsg.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T22:49:34.958Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HomeModel.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\HomeModel.cs",
-              "RelativeDocumentMoniker": "Home\\HomeModel.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\HomeModel.cs",
-              "RelativeToolTip": "Home\\HomeModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T22:04:42.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\HomeController.cs",
-              "RelativeDocumentMoniker": "Home\\HomeController.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\HomeController.cs",
-              "RelativeToolTip": "Home\\HomeController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwC8AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T23:21:01.463Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "e58f137b-e73a-4167-a367-c1e59db6c6eb",
-        "Display": 1,
-        "X": 579,
-        "Y": 265,
-        "Width": 1141,
-        "Height": 778,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Homepage.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\Homepage.cs",
-              "RelativeDocumentMoniker": "Home\\Homepage.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\Homepage.cs",
-              "RelativeToolTip": "Home\\Homepage.cs",
-              "ViewState": "AQIAAKoAAAAAAAAAAAA8wPgAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T00:16:33.893Z",
+              "WhenOpened": "2024-06-14T21:55:29.004Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Homepage.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\Homepage.cs",
+              "Title": "UserClass.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastro de usuarios\\UserClass.cs",
+              "RelativeDocumentMoniker": "Cadastro de usuarios\\UserClass.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastro de usuarios\\UserClass.cs",
+              "RelativeToolTip": "Cadastro de usuarios\\UserClass.cs",
+              "ViewState": "AQIAAGAAAAAAAAAAAIAwwFUAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T22:47:37.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdicionarUsuariosFront.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastro de usuarios\\AdicionarUsuariosFront.cs",
+              "RelativeDocumentMoniker": "Cadastro de usuarios\\AdicionarUsuariosFront.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastro de usuarios\\AdicionarUsuariosFront.cs",
+              "RelativeToolTip": "Cadastro de usuarios\\AdicionarUsuariosFront.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAIA4wBoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T00:22:48.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdicionarUsuariosFront.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastro de usuarios\\AdicionarUsuariosFront.cs",
+              "RelativeDocumentMoniker": "Cadastro de usuarios\\AdicionarUsuariosFront.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastro de usuarios\\AdicionarUsuariosFront.cs [Projeto]",
+              "RelativeToolTip": "Cadastro de usuarios\\AdicionarUsuariosFront.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T00:22:45.932Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Config.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Backsys\\Config.cs",
+              "RelativeDocumentMoniker": "Backsys\\Config.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Backsys\\Config.cs",
+              "RelativeToolTip": "Backsys\\Config.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAApwBoAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T22:58:09.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Homepage.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Home\\Homepage.cs",
               "RelativeDocumentMoniker": "Home\\Homepage.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST\\Home\\Homepage.cs [Projeto]",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Home\\Homepage.cs",
+              "RelativeToolTip": "Home\\Homepage.cs",
+              "ViewState": "AQIAAPIAAAAAAAAAAAAewPwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T00:35:57.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Homepage.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Home\\Homepage.cs",
+              "RelativeDocumentMoniker": "Home\\Homepage.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Home\\Homepage.cs [Projeto]",
               "RelativeToolTip": "Home\\Homepage.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T21:00:22.247Z",
+              "WhenOpened": "2024-06-08T00:06:09.046Z",
               "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AlterarUserCFront.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs",
+              "RelativeDocumentMoniker": "Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs",
+              "RelativeToolTip": "Cadastro de usuarios\\Editar usuarios\\AlterarUserCFront.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAMwCsAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-08T00:30:32.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginClass.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Login\\LoginClass.cs",
+              "RelativeDocumentMoniker": "Login\\LoginClass.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Login\\LoginClass.cs",
+              "RelativeToolTip": "Login\\LoginClass.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAEwEIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T22:58:21.256Z",
+              "EditorCaption": ""
             }
           ]
         }

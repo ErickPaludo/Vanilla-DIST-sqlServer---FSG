@@ -11,7 +11,7 @@ namespace Vanilla
         static void Main()
         {
            ApplicationConfiguration.Initialize();
-           Application.Run(new LoginFront()); // Acessa LOGIN
+           Application.Run(new Homepage()); // Acessa LOGIN
         }
     }
 }

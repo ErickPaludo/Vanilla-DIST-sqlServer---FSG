@@ -53,6 +53,7 @@ namespace Vanilla
 
         public string FormatEndereco(string ip, string porta, string sid, string user, string pass) //Formata os dados
         {
+            //Server=meuservidor;Database=minibanco;Integrated Security=True
             return $"Data Source={ip}:{porta}/{sid};User Id ={user};Password={pass};";
         }
 

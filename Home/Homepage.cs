@@ -157,7 +157,7 @@ namespace Vanilla
                 Bvisualizaitens = value;
             }
         }
-      
+
 
         #endregion
 
@@ -196,7 +196,7 @@ namespace Vanilla
         private void StrCadUs(object sender, EventArgs e)
         {
             controller.StartCadUser();
-        }  
+        }
         #endregion
 
         #region Visualização
@@ -213,7 +213,7 @@ namespace Vanilla
             controller.StartViewItens();
         }
         #endregion
-       
+
 
         public void Exibir()
         {
@@ -250,10 +250,5 @@ namespace Vanilla
             editbank.ShowDialog();
         }
 
-        private void VerSobre(object sender, EventArgs e)
-        {
-            Sobre sobre = new Sobre();
-            sobre.Show();
-        }
     }
 }

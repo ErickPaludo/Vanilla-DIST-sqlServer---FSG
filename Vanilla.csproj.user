@@ -5,9 +5,6 @@
     <Compile Update="Backsys\ConfigBank.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Backsys\Sobre.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="CadastraCd\CadastroCd.cs">
       <SubType>Form</SubType>
     </Compile>

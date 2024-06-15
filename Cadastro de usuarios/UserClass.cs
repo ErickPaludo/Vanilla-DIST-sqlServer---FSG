@@ -2,6 +2,7 @@
 using Microsoft.VisualBasic.ApplicationServices;
 using Oracle.ManagedDataAccess.Client;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace Vanilla
 {
@@ -81,30 +82,30 @@ namespace Vanilla
             this.login = login;
         }
 
-        public void Adduser(string nome, string cpf, string email, string tel, string tel2, string permissao, string status, string user, string pass, bool status_enc_email)//Adiciona usuário ao banco
+        public void Adduser(string nome, string cpf, string email, string tel, string tel2, string permissao, string status, string user, string pass, bool status_enc_email)
         {
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                using (SqlConnection connection = new SqlConnection(config.Lerdados()))
                 {
                     try
                     {
                         connection.Open();
-                        using (OracleCommand cmd = new OracleCommand("vnl_pkg_users.vnl_ins_user", connection))
+                        using (SqlCommand cmd = new SqlCommand("dev.vnl_ins_user", connection))
                         {
                             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            cmd.Parameters.Add("v_nome", nome);
-                            cmd.Parameters.Add("v_cpf", cpf);
-                            cmd.Parameters.Add("v_email", email);
-                            cmd.Parameters.Add("v_tel", tel);
-                            cmd.Parameters.Add("v_tel_2", tel2);
-                            cmd.Parameters.Add("v_perm", permissao);
-                            cmd.Parameters.Add("v_status", status);
-                            cmd.Parameters.Add("v_login", user);
-                            cmd.Parameters.Add("v_pass", pass);
+                            cmd.Parameters.Add(new SqlParameter("@v_nome", nome));
+                            cmd.Parameters.Add(new SqlParameter("@v_cpf", cpf));
+                            cmd.Parameters.Add(new SqlParameter("@v_email", email));
+                            cmd.Parameters.Add(new SqlParameter("@v_tel", tel));
+                            cmd.Parameters.Add(new SqlParameter("@v_tel_2", tel2));
+                            cmd.Parameters.Add(new SqlParameter("@v_perm", permissao));
+                            cmd.Parameters.Add(new SqlParameter("@v_status", status));
+                            cmd.Parameters.Add(new SqlParameter("@v_login", user));
+                            cmd.Parameters.Add(new SqlParameter("@v_pass", pass));
 
                             cmd.ExecuteNonQuery();
-                            db.AddLog($"USUARIO: {user} | TIPO: {permissao} | FOI CADASTRADO COM SUCESSO!", Util.id_user);
+                           // db.AddLog($"USUARIO: {user} | TIPO: {permissao} | FOI CADASTRADO COM SUCESSO!", Util.id_user);
                             MessageBox.Show("Usuario adicionado com sucesso!");
                         }
                         connection.Close();
@@ -114,48 +115,15 @@ namespace Vanilla
                         MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            if (status_enc_email == true) //verifica se o envio para email está ativo
+            if (status_enc_email == true)
             {
-                util.EnviarEmail("Primeiro acesso!", email, $"Olá, seja bem vindo a equipe!\nSeguem abaixo os dados de acesso ao nosso sistema:\n\nUsuário: {user}\nSenha: {pass}\n\n\nVocê pode alterar a senha do seu perfil assim que acessar o sistema, basta acessa a barra superio do menu inicial do sistema, ir no seu nome de usuário > botão direiro > alterar conta. Após isso, basta sair e entrar novamente no sistema!"); //envia um email avisando sobre o novo cadastro
-            }
-        }
-        public void AlterUserC(string email, string tel, string tel2, string pass) //Altera usuário pelo primário
-        {
-            try
-            {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-                {
-                    connection.Open();
-
-                    using (OracleTransaction transaction = connection.BeginTransaction())
-                    {
-                        using (OracleCommand cmd = new OracleCommand("vnl_pkg_users.vnl_edit_userc", connection))
-                        {
-                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            cmd.Parameters.Add("v_id", OracleDbType.Int32).Value = id;
-                            cmd.Parameters.Add("v_email", OracleDbType.Varchar2).Value = email;
-                            cmd.Parameters.Add("v_tel", OracleDbType.Varchar2).Value = tel;
-                            cmd.Parameters.Add("v_tel_2", OracleDbType.Varchar2).Value = tel2;
-                            cmd.Parameters.Add("v_pass", OracleDbType.Varchar2).Value = pass;
-                            cmd.ExecuteNonQuery();
-                            db.AddLog($"ALTERAÇÃO REALIZADA COM SUCESSO!", Util.id_user);
-                        }
-
-                        MessageBox.Show("Usuário gravado com sucesso!");
-                    }
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                util.EnviarEmail("Primeiro acesso!", email, $"Olá, seja bem vindo a equipe!\nSeguem abaixo os dados de acesso ao nosso sistema:\n\nUsuário: {user}\nSenha: {pass}\n\n\nVocê pode alterar a senha do seu perfil assim que acessar o sistema, basta acessar a barra superior do menu inicial do sistema, ir no seu nome de usuário > botão direito > alterar conta. Após isso, basta sair e entrar novamente no sistema!");
             }
         }
         public void AlterUserADM(int id, string nome, string email, string tel, string tel2, string login, string pass, string perm, string status)//altera usuário por um terceiro (somente adm)

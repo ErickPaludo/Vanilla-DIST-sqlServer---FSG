@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Erick\\Desktop\\Vanilla-SQLserver\\Vanilla.csproj": {}
+    "C:\\Users\\erick\\OneDrive\\Área de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Vanilla.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Erick\\Desktop\\Vanilla-SQLserver\\Vanilla.csproj": {
+    "C:\\Users\\erick\\OneDrive\\Área de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Vanilla.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Erick\\Desktop\\Vanilla-SQLserver\\Vanilla.csproj",
+        "projectUniqueName": "C:\\Users\\erick\\OneDrive\\Área de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Vanilla.csproj",
         "projectName": "Vanilla",
-        "projectPath": "C:\\Users\\Erick\\Desktop\\Vanilla-SQLserver\\Vanilla.csproj",
-        "packagesPath": "C:\\Users\\Erick\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Erick\\Desktop\\Vanilla-SQLserver\\obj\\",
+        "projectPath": "C:\\Users\\erick\\OneDrive\\Área de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Vanilla.csproj",
+        "packagesPath": "C:\\Users\\erick\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\erick\\OneDrive\\Área de Trabalho\\Vanilla-DIST-sqlServer---FSG\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Erick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\erick\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -76,6 +82,10 @@
               "target": "Package",
               "version": "[14.4.7, )"
             },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            },
             "System.ServiceModel.Http": {
               "target": "Package",
               "version": "[6.2.0, )"
@@ -103,19 +113,19 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.25, 6.0.25]"
+              "version": "[6.0.27, 6.0.27]"
             },
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.25, 6.0.25]"
+              "version": "[6.0.27, 6.0.27]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.25, 6.0.25]"
+              "version": "[6.0.27, 6.0.27]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.25, 6.0.25]"
+              "version": "[6.0.27, 6.0.27]"
             }
           ],
           "frameworkReferences": {
@@ -126,7 +136,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

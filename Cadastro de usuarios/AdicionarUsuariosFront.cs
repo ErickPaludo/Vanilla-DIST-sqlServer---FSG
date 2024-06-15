@@ -25,21 +25,21 @@ namespace Vanilla
 
         private void GravarUser(object sender, EventArgs e)
         {
-            if (lic.VerificaLogin() == true)
+            if (true)
             {
                 if (!string.IsNullOrEmpty(nomeCompleto.Text) && !string.IsNullOrEmpty(cpfText.Text) && !string.IsNullOrEmpty(emailBox.Text) && !string.IsNullOrEmpty(telfBox.Text) && !string.IsNullOrEmpty(comboPerm.Text) && !string.IsNullOrEmpty(comboStatus.Text) && !string.IsNullOrEmpty(userBox.Text) && !string.IsNullOrEmpty(passBox.Text) && !string.IsNullOrEmpty(confPassBox.Text) && cpfText.Text.Length == 11)
                 {
                     if (userBox.Text.Length >= 3)
                     {
-
-                        if (db.AntiCopy("login", "vnl_user", userBox.Text) == true)
+                        //db.AntiCopy("login", "vnl_user", userBox.Text) == 
+                        if (true)
                         {
                             if (passBox.Text.Length >= 6 && confPassBox.Text.Length >= 6)
                             {
                                 if (passBox.Text == confPassBox.Text)
                                 {
                                     usuarios.Adduser(nomeCompleto.Text, cpfText.Text, emailBox.Text, telfBox.Text, telfBox2.Text, comboPerm.Text, comboStatus.Text, userBox.Text, passBox.Text, encaminhar.Checked);
-                                    this.Close();
+                                   
                                 }
                                 else
                                 {
