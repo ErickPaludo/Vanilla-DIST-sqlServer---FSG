@@ -123,8 +123,7 @@ namespace Vanilla
         private void CadastrarCnpj(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            if (lic.VerificaLogin() == true)
-            {
+          
                 try//verifica se o numero do endereco eh um numero de fato
                 {
                     Convert.ToInt32(textnumber.Text);
@@ -146,11 +145,6 @@ namespace Vanilla
                 {
                     MessageBox.Show("Alguns campos estão inválivos!");
                 }
-            }
-            else
-            {
-                Homepage home = new Homepage();
-            }
             Cursor = Cursors.Default;
         }
         private void GravarCnpj()
@@ -251,7 +245,7 @@ namespace Vanilla
         }
 
         private void combostatus_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            {
 
         }
 

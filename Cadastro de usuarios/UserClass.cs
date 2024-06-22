@@ -165,12 +165,12 @@ namespace Vanilla
         {
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                using (SqlConnection connection = new SqlConnection(config.Lerdados()))
                 {
                     connection.Open();
-                    using (OracleCommand cmd = new OracleCommand($"Select * From view_users", connection))
+                    using (SqlCommand cmd = new SqlCommand($"Select * From dev.view_users", connection))
                     {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())
                             {

@@ -586,7 +586,6 @@ C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-sqlServer---FSG\obj\Debug
 C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-sqlServer---FSG\obj\Debug\net6.0-windows\Vanilla.CadastrarItensFront.resources
 C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-sqlServer---FSG\obj\Debug\net6.0-windows\Vanilla.TabelaItens.resources
 C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-sqlServer---FSG\obj\Debug\net6.0-windows\Vanilla.AdicionarUsuariosFront.resources
-C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-sqlServer---FSG\obj\Debug\net6.0-windows\Vanilla.AlterarUserCFront.resources
 C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-sqlServer---FSG\obj\Debug\net6.0-windows\Vanilla.AlterarUsersGeral.resources
 C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-sqlServer---FSG\obj\Debug\net6.0-windows\Vanilla.ErrorBox.resources
 C:\Users\erick\OneDrive\Área de Trabalho\Vanilla-DIST-sqlServer---FSG\obj\Debug\net6.0-windows\Vanilla.ErrorComponent.resources

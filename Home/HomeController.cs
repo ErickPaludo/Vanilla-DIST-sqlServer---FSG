@@ -38,9 +38,6 @@ namespace Vanilla
         }
         public void AlterUser()
         {
-            AlterarUserCFront altercomun = new AlterarUserCFront();
-            altercomun.ExibirDados();
-            altercomun.Show();
         }
         public void TrocarConta()
         {

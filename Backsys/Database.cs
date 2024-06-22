@@ -8,6 +8,7 @@ using System.Reflection.PortableExecutable;
 using System.Reflection.Metadata;
 using Newtonsoft.Json.Linq;
 using System.Drawing.Text;
+using System.Data.SqlClient;
 
 
 namespace Vanilla
@@ -347,28 +348,22 @@ namespace Vanilla
 
 
         #endregion
-        public bool AntiCopy(string celula, string table, string cod)//Verifica se uma palavra já existe já existe
+        public bool AntiCopy(string celula, string table, string cod)
         {
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            using (SqlConnection connection = new SqlConnection(config.Lerdados()))
             {
                 try
                 {
-
                     connection.Open();
-                    string query = $"SELECT COUNT(*) FROM {table} WHERE {celula} = :cod";
+                    // Certifique-se de que 'table' e 'celula' são valores confiáveis
+                    string query = $"SELECT COUNT(*) FROM {table} WHERE {celula} = @cod";
 
-                    using (OracleCommand cmd = new OracleCommand(query, connection))
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
                     {
-                        cmd.Parameters.Add(":cod", OracleDbType.Varchar2).Value = cod;
+                        cmd.Parameters.AddWithValue("@cod", cod);
                         int count = Convert.ToInt32(cmd.ExecuteScalar());
-                        if (count != 0)
-                        {
-                            return false;
-                        }
-                        else
-                        {
-                            return true;
-                        }
+
+                        return count == 0;
                     }
                 }
                 catch (Exception ex)

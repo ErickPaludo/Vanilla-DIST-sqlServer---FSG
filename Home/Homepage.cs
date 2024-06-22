@@ -23,7 +23,7 @@ namespace Vanilla
         public Homepage()
         {
             InitializeComponent();
-            lic.ValidaLicenca();
+         //   lic.ValidaLicenca();
             Exibir();
         }
         public Homepage(bool t)
@@ -47,17 +47,7 @@ namespace Vanilla
                 Snameuser = value;
             }
         }
-        public ToolStripMenuItem UserOn
-        {
-            get
-            {
-                return Suseron;
-            }
-            set
-            {
-                Suseron = value;
-            }
-        }
+      
         public ToolStripMenuItem AlterUserAdm
         {
             get
@@ -222,8 +212,7 @@ namespace Vanilla
                 Salterauseradm.Visible = false;
                 //containerlabelcad.Visible = false;
                 // containercad.Visible = false;
-                Badduser.Visible = false;
-                Suseron.Visible = false;
+                Badduser.Visible = false; 
             }
             Snameuser.Text = utilitarios.Nome_user;
         }
@@ -239,9 +228,7 @@ namespace Vanilla
 
         private void Config_User(object sender, EventArgs e)
         {
-            AlterarUserCFront altercomun = new AlterarUserCFront();
-            altercomun.ExibirDados();
-            altercomun.ShowDialog();
+          
         }
 
         private void EndereçoBanco(object sender, EventArgs e)

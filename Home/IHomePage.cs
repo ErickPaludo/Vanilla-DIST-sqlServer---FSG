@@ -13,10 +13,7 @@ namespace Vanilla
         {
             get;set;
         }
-        ToolStripMenuItem UserOn
-        {
-            get; set;
-        }
+       
         ToolStripMenuItem AlterUserAdm
         {
             get; set;

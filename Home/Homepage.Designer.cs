@@ -35,7 +35,6 @@
             Badduser = new Button();
             menuStrip1 = new MenuStrip();
             Snameuser = new ToolStripMenuItem();
-            Suseron = new ToolStripMenuItem();
             Salterauseradm = new ToolStripMenuItem();
             Slogout = new ToolStripMenuItem();
             Sexit = new ToolStripMenuItem();
@@ -128,20 +127,11 @@
             // 
             // Snameuser
             // 
-            Snameuser.DropDownItems.AddRange(new ToolStripItem[] { Suseron, Salterauseradm, Slogout, Sexit });
+            Snameuser.DropDownItems.AddRange(new ToolStripItem[] { Salterauseradm, Slogout, Sexit });
             Snameuser.ForeColor = SystemColors.ButtonHighlight;
             Snameuser.Name = "Snameuser";
             Snameuser.Size = new Size(59, 20);
             Snameuser.Text = "Usuário";
-            // 
-            // Suseron
-            // 
-            Suseron.BackColor = Color.DarkSlateBlue;
-            Suseron.ForeColor = SystemColors.ButtonHighlight;
-            Suseron.Name = "Suseron";
-            Suseron.Size = new Size(193, 22);
-            Suseron.Text = "Usuários Online";
-            Suseron.Click += LOgados;
             // 
             // Salterauseradm
             // 
@@ -356,7 +346,6 @@
         private FlowLayoutPanel containerlabelcad;
         private FlowLayoutPanel flowLayoutPanel4;
         private FlowLayoutPanel containercad;
-        private ToolStripMenuItem Suseron;
         private PictureBox pictureBox1;
     }
 }

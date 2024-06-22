@@ -23,41 +23,39 @@ namespace Vanilla
                 try
                 {
                     connection.Open();
-                    using (SqlCommand cmd = new SqlCommand("vnl_pkg_users.vnl_login_user", connection))
+                    using (SqlCommand cmd = new SqlCommand("dev.vnl_login_user", connection))
                     {
-                        //cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        //cmd.Parameters.Add("v_user", OracleDbType.Varchar2).Value = user;
-                        //cmd.Parameters.Add("v_pass", OracleDbType.Varchar2).Value = pass;
-                        //cmd.Parameters.Add("v_ip", OracleDbType.Varchar2).Value = Dns.GetHostAddresses(Dns.GetHostName())
-                        //.FirstOrDefault(ip => ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork);
-                        //cmd.Parameters.Add("v_host", OracleDbType.Varchar2).Value = System.Net.Dns.GetHostName();
-                        //cmd.Parameters.Add("r_verificador", OracleDbType.Boolean).Direction = ParameterDirection.Output;
-                        //cmd.Parameters.Add("r_msg", OracleDbType.Varchar2, 1000).Direction = ParameterDirection.Output;
-                        //cmd.Parameters.Add("r_id_user", OracleDbType.Int32).Direction = ParameterDirection.Output;
-                        //cmd.Parameters.Add("r_perm", OracleDbType.Int32).Direction = ParameterDirection.Output;
-                        //cmd.ExecuteNonQuery();
-                        //string msg = cmd.Parameters["r_msg"].Value.ToString();
-                        //decimal id = ((OracleDecimal)cmd.Parameters["r_id_user"].Value).Value;
-                        //bool ver = ((OracleBoolean)cmd.Parameters["r_verificador"].Value).IsTrue;
-                        //decimal perm = ((OracleDecimal)cmd.Parameters["r_perm"].Value).Value;
-                        //string name = user;
-                        //util = new Util();
-                        //util.DadosUser(Convert.ToInt32(id), Convert.ToInt32(perm), name);
-                        //if (ver == false)
-                        //{
-                        //    MessageBox.Show(msg);
-                        //}
-                        //else
-                        //{
-                        //    db.AddLog("USUÁRIO LOGADO!", Util.id_user); //temporário
-                        //}
-                        //return ver;
-                        return false;
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("v_user", SqlDbType.NVarChar).Value = user;
+                        cmd.Parameters.Add("v_pass", SqlDbType.NVarChar).Value = pass;
+                        cmd.Parameters.Add("r_verificador", SqlDbType.Bit).Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add("r_msg", SqlDbType.NVarChar, 255).Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add("r_id_user", SqlDbType.Int).Direction = ParameterDirection.Output;
+                        cmd.Parameters.Add("r_perm", SqlDbType.Int).Direction = ParameterDirection.Output;
+
+                        cmd.ExecuteNonQuery();
+                        connection.Close();
+                        string msg = cmd.Parameters["r_msg"].Value.ToString();
+                        int id = (int)cmd.Parameters["r_id_user"].Value;
+                        bool ver = (bool)cmd.Parameters["r_verificador"].Value;
+                        int perm = (int)cmd.Parameters["r_perm"].Value;
+                        string name = user;
+
+                        util = new Util();
+                        util.DadosUser(id, perm, name);
+
+                        if (!ver)
+                        {
+                            MessageBox.Show(msg);
+                        }
+
+                        return ver;
                     }
                 }
                 catch (Exception ex)
                 {
-                    ErrorBox errorBox = new ErrorBox("Favor Verificar a conexao com o banco de dados!",ex.Message);
+                    ErrorBox errorBox = new ErrorBox("Favor Verificar a conexao com o banco de dados!", ex.Message);
                     return false;
                 }
             }

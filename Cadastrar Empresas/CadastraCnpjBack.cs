@@ -2,6 +2,8 @@
 using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Numerics;
 using System.Runtime.ConstrainedExecution;
@@ -96,47 +98,49 @@ namespace Vanilla
             this.id = id;
             this.id_end = id_end;
         }
-     
-        public void GravarCnpj(string cnpj,string nomefantasia,string nome,DateTime abertura, DateTime cadastro, string insc_est,string type_cad, string tel,string email,string status, string rua, int numero, string comple, string bairro, string cidade, string uf, string cep)//Grava a empresa via banco
+
+        public void GravarCnpj(string cnpj, string nomefantasia, string nome, DateTime abertura, DateTime cadastro, string insc_est, string type_cad, string tel, string email, string status, string rua, int numero, string comple, string bairro, string cidade, string uf, string cep)
         {
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            using (SqlConnection connection = new SqlConnection(config.Lerdados()))
             {
                 try
                 {
                     connection.Open();
 
-                    using (OracleCommand cmd = new OracleCommand("vnl_pkg_empresas.vnl_ins_emp", connection))
+                    using (SqlCommand cmd = new SqlCommand("dev.vnl_ins_emp", connection))
                     {
-                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        cmd.Parameters.Add("v_nome_emp", nome);
-                        cmd.Parameters.Add("v_cnpj", cnpj);
-                        cmd.Parameters.Add("v_inc", insc_est);
-                        cmd.Parameters.Add("v_tipo_emp", type_cad);
-                        cmd.Parameters.Add("v_tel", tel);
-                        cmd.Parameters.Add("v_email", email);
-                        cmd.Parameters.Add("v_data_abert", abertura);
-                        cmd.Parameters.Add("v_date_cad", cadastro);
-                        cmd.Parameters.Add("v_status", status);
-                        cmd.Parameters.Add("v_name_f", nomefantasia);
-                        cmd.Parameters.Add("v_rua", rua);
-                        cmd.Parameters.Add("v_numero_end", numero.ToString());
-                        cmd.Parameters.Add("v_complemento", comple);
-                        cmd.Parameters.Add("v_bairro", bairro);
-                        cmd.Parameters.Add("v_cidade", cidade);
-                        cmd.Parameters.Add("v_uf", uf);
-                        cmd.Parameters.Add("v_cep", cep);
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add(new SqlParameter("@v_nome_emp", SqlDbType.VarChar, 100)).Value = nome;
+                        cmd.Parameters.Add(new SqlParameter("@v_cnpj", SqlDbType.VarChar, 20)).Value = cnpj;
+                        cmd.Parameters.Add(new SqlParameter("@v_inc", SqlDbType.VarChar, 20)).Value = insc_est;
+                        cmd.Parameters.Add(new SqlParameter("@v_tipo_emp", SqlDbType.VarChar, 15)).Value = type_cad;
+                        cmd.Parameters.Add(new SqlParameter("@v_tel", SqlDbType.VarChar, 15)).Value = tel;
+                        cmd.Parameters.Add(new SqlParameter("@v_email", SqlDbType.VarChar, 100)).Value = email;
+                        cmd.Parameters.Add(new SqlParameter("@v_data_abert", SqlDbType.Date)).Value = abertura;
+                        cmd.Parameters.Add(new SqlParameter("@v_date_cad", SqlDbType.Date)).Value = cadastro;
+                        cmd.Parameters.Add(new SqlParameter("@v_status", SqlDbType.VarChar, 15)).Value = status;
+                        cmd.Parameters.Add(new SqlParameter("@v_name_f", SqlDbType.VarChar, 100)).Value = nomefantasia;
+                        cmd.Parameters.Add(new SqlParameter("@v_rua", SqlDbType.VarChar, 40)).Value = rua;
+                        cmd.Parameters.Add(new SqlParameter("@v_numero_end", SqlDbType.VarChar, 6)).Value = numero.ToString();
+                        cmd.Parameters.Add(new SqlParameter("@v_complemento", SqlDbType.VarChar, 255)).Value = comple;
+                        cmd.Parameters.Add(new SqlParameter("@v_bairro", SqlDbType.VarChar, 40)).Value = bairro;
+                        cmd.Parameters.Add(new SqlParameter("@v_cidade", SqlDbType.VarChar, 40)).Value = cidade;
+                        cmd.Parameters.Add(new SqlParameter("@v_uf", SqlDbType.VarChar, 2)).Value = uf;
+                        cmd.Parameters.Add(new SqlParameter("@v_cep", SqlDbType.VarChar, 14)).Value = cep;
+
                         cmd.ExecuteNonQuery();
-                        db.AddLog($"EMPRESA {nome} | {cnpj} | TIPO: {type_cad} | FOI CADASTRADA COM SUCESSO!", Util.id_user);
+
+                      //  db.AddLog($"EMPRESA {nome} | {cnpj} | TIPO: {type_cad} | FOI CADASTRADA COM SUCESSO!", Util.id_user);
                         MessageBox.Show("Operação Concluída!");
+                        connection.Close();
                     }
-                    connection.Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                }        
             }
-          
         }
         public void EditarCnpj(int id,int id_end,string cnpj, string nomefantasia, string nome, DateTime abertura, DateTime cadastro, string insc_est, string type_cad, string tel, string email, string status, string rua, int numero, string comple, string bairro, string cidade, string uf, string cep)//Grava a empresa via banco
         {
@@ -192,7 +196,7 @@ namespace Vanilla
 
         public bool NoCopy(string cod) //Verifica se o Cnpj está cadastrado
         {
-        return db.AntiCopy("cnpj", "vnl_cad_empresas", cod);
+        return db.AntiCopy("cnpj", "dev.vnl_cad_empresas", cod);
         }
     }
 }
