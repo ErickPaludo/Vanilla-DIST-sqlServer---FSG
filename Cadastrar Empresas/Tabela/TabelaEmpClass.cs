@@ -1,6 +1,7 @@
 ﻿using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,20 +14,20 @@ namespace Vanilla
 
         public void CarregarDadosEmpresas(int retorno, string cod_emp)
         {
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            using (SqlConnection connection = new SqlConnection(config.Lerdados()))
             {
                 try
                 {
                     connection.Open();
-                    string query = "Select * From view_empresas";
+                    string query = "Select * From dev.view_empresas";
                     if (retorno == 1)
                     {
-                        query = $"Select * From view_empresas where cnpj = '{cod_emp}'";
+                        query = $"Select * From dev.view_empresas where cnpj = '{cod_emp}'";
                     }
 
-                    using (OracleCommand cmd = new OracleCommand(query, connection))
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
                     {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())
                             {
@@ -63,6 +64,7 @@ namespace Vanilla
                             }
                         }
                     }
+                    connection.Close();
                 }
                 catch (Exception ex)
                 {

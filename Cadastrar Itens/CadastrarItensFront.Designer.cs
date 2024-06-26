@@ -30,9 +30,9 @@ namespace Vanilla
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             TnomeItem = new TextBox();
             Snomeitem = new Label();
             Lcodbar = new Label();
@@ -76,8 +76,6 @@ namespace Vanilla
             Laltura = new Label();
             Lcomprimento = new Label();
             Llargura = new Label();
-            Bselectend = new Button();
-            Lenderecoselecionado = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridFornecedores).BeginInit();
             menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureCodBar).BeginInit();
@@ -172,27 +170,27 @@ namespace Vanilla
             dataGridFornecedores.AllowUserToAddRows = false;
             dataGridFornecedores.AllowUserToDeleteRows = false;
             dataGridFornecedores.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridFornecedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridFornecedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridFornecedores.BackgroundColor = SystemColors.Control;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = SystemColors.Control;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dataGridFornecedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dataGridFornecedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridFornecedores.Columns.AddRange(new DataGridViewColumn[] { ColumnId, ColumnNome, ColumnCNPJ });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = SystemColors.Window;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dataGridFornecedores.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = SystemColors.Window;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dataGridFornecedores.DefaultCellStyle = dataGridViewCellStyle6;
             dataGridFornecedores.Enabled = false;
             dataGridFornecedores.Location = new Point(680, 82);
             dataGridFornecedores.Name = "dataGridFornecedores";
@@ -478,6 +476,7 @@ namespace Vanilla
             Taltura.Size = new Size(100, 23);
             Taltura.TabIndex = 34;
             Taltura.KeyDown += Qnt_KeyDown;
+            Taltura.KeyPress += PrecoCusto_KeyPress;
             Taltura.Leave += CalculaMetrosCubicos;
             // 
             // Tcomprimento
@@ -488,6 +487,7 @@ namespace Vanilla
             Tcomprimento.Size = new Size(100, 23);
             Tcomprimento.TabIndex = 35;
             Tcomprimento.KeyDown += Qnt_KeyDown;
+            Tcomprimento.KeyPress += PrecoCusto_KeyPress;
             Tcomprimento.Leave += CalculaMetrosCubicos;
             // 
             // TLargura
@@ -498,6 +498,7 @@ namespace Vanilla
             TLargura.Size = new Size(100, 23);
             TLargura.TabIndex = 36;
             TLargura.KeyDown += Qnt_KeyDown;
+            TLargura.KeyPress += PrecoCusto_KeyPress;
             TLargura.Leave += CalculaMetrosCubicos;
             // 
             // Lcubagen
@@ -540,34 +541,12 @@ namespace Vanilla
             Llargura.TabIndex = 40;
             Llargura.Text = "Largura:";
             // 
-            // Bselectend
-            // 
-            Bselectend.Enabled = false;
-            Bselectend.Location = new Point(429, 108);
-            Bselectend.Name = "Bselectend";
-            Bselectend.Size = new Size(194, 24);
-            Bselectend.TabIndex = 41;
-            Bselectend.Text = "Seleciona Picking";
-            Bselectend.UseVisualStyleBackColor = true;
-            Bselectend.Click += SelectEnd;
-            // 
-            // Lenderecoselecionado
-            // 
-            Lenderecoselecionado.AutoSize = true;
-            Lenderecoselecionado.Location = new Point(482, 165);
-            Lenderecoselecionado.Name = "Lenderecoselecionado";
-            Lenderecoselecionado.Size = new Size(90, 15);
-            Lenderecoselecionado.TabIndex = 42;
-            Lenderecoselecionado.Text = "(Sem Endereço)";
-            // 
             // CadastrarItensFront
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(1134, 556);
-            Controls.Add(Lenderecoselecionado);
-            Controls.Add(Bselectend);
             Controls.Add(Llargura);
             Controls.Add(Lcomprimento);
             Controls.Add(Laltura);
@@ -666,7 +645,5 @@ namespace Vanilla
         private Label Laltura;
         private Label Lcomprimento;
         private Label Llargura;
-        private Button Bselectend;
-        private Label Lenderecoselecionado;
     }
 }

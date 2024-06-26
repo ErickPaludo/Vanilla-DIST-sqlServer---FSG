@@ -3,23 +3,55 @@
   "WorkspaceRootPath": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist-sqlserver---fsg\\cadastro de usuarios\\userclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastro de usuarios\\userclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist-sqlserver---fsg\\cadastro de usuarios\\editar usuarios\\alterarusersgeral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastro de usuarios\\editar usuarios\\alterarusersgeral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist-sqlserver---fsg\\cadastro de usuarios\\editar usuarios\\alterarusersgeral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastro de usuarios\\editar usuarios\\alterarusersgeral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\cadastrar itens\\cadastraritensfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastrar itens\\cadastraritensfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist-sqlserver---fsg\\cadastrar itens\\tabelaitens\\tabelaitens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastrar itens\\tabelaitens\\tabelaitens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\cadastrar itens\\cadastraritensfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastrar itens\\cadastraritensfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist-sqlserver---fsg\\cadastrar itens\\cadastraritens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastrar itens\\cadastraritens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist-sqlserver---fsg\\cadastrar itens\\cadastraritensfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastrar itens\\cadastraritensfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist-sqlserver---fsg\\cadastrar empresas\\tabela\\tabelaempclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastrar empresas\\tabela\\tabelaempclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist-sqlserver---fsg\\cadastrar empresas\\cadastracnpjback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist-sqlserver---fsg\\cadastrar itens\\tabelaitens\\tabelaitens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastrar itens\\tabelaitens\\tabelaitens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist-sqlserver---fsg\\cadastrar empresas\\tabela\\tabelaempresas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastrar empresas\\tabela\\tabelaempresas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist-sqlserver---fsg\\cadastrar empresas\\tabela\\tabelaempresas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastrar empresas\\tabela\\tabelaempresas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\cadastrar empresas\\cadastracnpjback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastrar empresas\\cadastracnpjback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist-sqlserver---fsg\\cadastrar itens\\cadastraritensfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:cadastrar itens\\cadastraritensfront.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|c:\\users\\erick\\onedrive\\\u00E1rea de trabalho\\vanilla-dist-sqlserver---fsg\\backsys\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\backsys\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B79A090-213D-4C3D-B217-92E3FB389BFA}|Vanilla.csproj|solutionrelative:backsys\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -35,19 +67,106 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UserClass.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastro de usuarios\\UserClass.cs",
+              "RelativeDocumentMoniker": "Cadastro de usuarios\\UserClass.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastro de usuarios\\UserClass.cs",
+              "RelativeToolTip": "Cadastro de usuarios\\UserClass.cs",
+              "ViewState": "AQIAAIQAAAAAAAAAAAAawIAAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T01:14:08.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AlterarUsersGeral.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastro de usuarios\\Editar usuarios\\AlterarUsersGeral.cs",
+              "RelativeDocumentMoniker": "Cadastro de usuarios\\Editar usuarios\\AlterarUsersGeral.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastro de usuarios\\Editar usuarios\\AlterarUsersGeral.cs",
+              "RelativeToolTip": "Cadastro de usuarios\\Editar usuarios\\AlterarUsersGeral.cs",
+              "ViewState": "AQIAAJoAAAAAAAAAAAAawKkAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T02:14:29.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AlterarUsersGeral.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastro de usuarios\\Editar usuarios\\AlterarUsersGeral.cs",
+              "RelativeDocumentMoniker": "Cadastro de usuarios\\Editar usuarios\\AlterarUsersGeral.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastro de usuarios\\Editar usuarios\\AlterarUsersGeral.cs [Projeto]",
+              "RelativeToolTip": "Cadastro de usuarios\\Editar usuarios\\AlterarUsersGeral.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T02:14:25.053Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "CadastrarItens.cs",
               "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Itens\\CadastrarItens.cs",
               "RelativeDocumentMoniker": "Cadastrar Itens\\CadastrarItens.cs",
               "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Itens\\CadastrarItens.cs",
               "RelativeToolTip": "Cadastrar Itens\\CadastrarItens.cs",
-              "ViewState": "AQIAACIBAAAAAAAAAAAswCMBAAAUAAAA",
+              "ViewState": "AQIAAEMBAAAAAAAAAAAnwFABAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T01:16:46.729Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
+              "Title": "Database.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Backsys\\Database.cs",
+              "RelativeDocumentMoniker": "Backsys\\Database.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Backsys\\Database.cs",
+              "RelativeToolTip": "Backsys\\Database.cs",
+              "ViewState": "AQIAAFYBAAAAAAAAAAAnwF4BAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T01:38:29.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CadastrarItensFront.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Itens\\CadastrarItensFront.cs",
+              "RelativeDocumentMoniker": "Cadastrar Itens\\CadastrarItensFront.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Itens\\CadastrarItensFront.cs",
+              "RelativeToolTip": "Cadastrar Itens\\CadastrarItensFront.cs",
+              "ViewState": "AQIAACkBAAAAAAAAAAAewDQBAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T01:14:58.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TabelaItens.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Itens\\TabelaItens\\TabelaItens.cs",
+              "RelativeDocumentMoniker": "Cadastrar Itens\\TabelaItens\\TabelaItens.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Itens\\TabelaItens\\TabelaItens.cs [Projeto]",
+              "RelativeToolTip": "Cadastrar Itens\\TabelaItens\\TabelaItens.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T01:34:10.637Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CadastrarItensFront.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Itens\\CadastrarItensFront.cs",
+              "RelativeDocumentMoniker": "Cadastrar Itens\\CadastrarItensFront.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Itens\\CadastrarItensFront.cs [Projeto]",
+              "RelativeToolTip": "Cadastrar Itens\\CadastrarItensFront.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T01:16:20.248Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "CadastraCnpjBack.cs",
               "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Empresas\\CadastraCnpjBack.cs",
               "RelativeDocumentMoniker": "Cadastrar Empresas\\CadastraCnpjBack.cs",
@@ -60,41 +179,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Database.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Backsys\\Database.cs",
-              "RelativeDocumentMoniker": "Backsys\\Database.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Backsys\\Database.cs",
-              "RelativeToolTip": "Backsys\\Database.cs",
-              "ViewState": "AQIAAFYBAAAAAAAAAAAnwF4BAAAcAAAA",
+              "DocumentIndex": 10,
+              "Title": "TabelaEmpresas.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Empresas\\Tabela\\TabelaEmpresas.cs",
+              "RelativeDocumentMoniker": "Cadastrar Empresas\\Tabela\\TabelaEmpresas.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Empresas\\Tabela\\TabelaEmpresas.cs [Projeto]",
+              "RelativeToolTip": "Cadastrar Empresas\\Tabela\\TabelaEmpresas.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T01:38:29.83Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CadastrarItensFront.cs",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Itens\\CadastrarItensFront.cs",
-              "RelativeDocumentMoniker": "Cadastrar Itens\\CadastrarItensFront.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Itens\\CadastrarItensFront.cs",
-              "RelativeToolTip": "Cadastrar Itens\\CadastrarItensFront.cs",
-              "ViewState": "AQIAAIoAAAAAAAAAAAAewJUAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T01:14:58.222Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CadastrarItensFront.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Itens\\CadastrarItensFront.cs",
-              "RelativeDocumentMoniker": "Cadastrar Itens\\CadastrarItensFront.cs",
-              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Itens\\CadastrarItensFront.cs [Projeto]",
-              "RelativeToolTip": "Cadastrar Itens\\CadastrarItensFront.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T01:16:20.248Z",
+              "WhenOpened": "2024-06-26T00:40:31.223Z",
               "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TabelaEmpresas.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Empresas\\Tabela\\TabelaEmpresas.cs",
+              "RelativeDocumentMoniker": "Cadastrar Empresas\\Tabela\\TabelaEmpresas.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Empresas\\Tabela\\TabelaEmpresas.cs",
+              "RelativeToolTip": "Cadastrar Empresas\\Tabela\\TabelaEmpresas.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAuwDYAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T00:42:01.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TabelaEmpClass.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Empresas\\Tabela\\TabelaEmpClass.cs",
+              "RelativeDocumentMoniker": "Cadastrar Empresas\\Tabela\\TabelaEmpClass.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Empresas\\Tabela\\TabelaEmpClass.cs",
+              "RelativeToolTip": "Cadastrar Empresas\\Tabela\\TabelaEmpClass.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAewA8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T00:42:06.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TabelaItens.cs",
+              "DocumentMoniker": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Itens\\TabelaItens\\TabelaItens.cs",
+              "RelativeDocumentMoniker": "Cadastrar Itens\\TabelaItens\\TabelaItens.cs",
+              "ToolTip": "C:\\Users\\erick\\OneDrive\\\u00C1rea de Trabalho\\Vanilla-DIST-sqlServer---FSG\\Cadastrar Itens\\TabelaItens\\TabelaItens.cs",
+              "RelativeToolTip": "Cadastrar Itens\\TabelaItens\\TabelaItens.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAMwDQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T01:34:12.488Z",
+              "EditorCaption": ""
             }
           ]
         }
