@@ -1,4 +1,6 @@
 ﻿using Oracle.ManagedDataAccess.Client;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Vanilla
 {
@@ -204,7 +206,7 @@ namespace Vanilla
             this.codbar = codbar;
             this.status_conv = status_conv;
             this.descricao = descricao;
-            this.unmed = unmed;         
+            this.unmed = unmed;
         }
 
         public CadastrarItens(int id_item, int id_fornec, string nome_f, string nome_item, decimal preco_custo, decimal lucro_porcent, decimal preco_final, string codbar, string status_conv, string descricao, string unmed, decimal altura, decimal largura, decimal comprimento, decimal cubagem) : base(nome_f, id_fornec)
@@ -263,35 +265,32 @@ namespace Vanilla
 
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                using (SqlConnection connection = new SqlConnection(config.Lerdados()))
                 {
                     connection.Open();
 
-                    using (OracleTransaction transaction = connection.BeginTransaction())
+
+                    using (SqlCommand cmd = new SqlCommand("dev.vnl_ins_item", connection))
                     {
-                        using (OracleCommand cmd = new OracleCommand("vnl_pkg_itens.vnl_ins_item", connection))
-                        {
-                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            cmd.Parameters.Add("v_id_f", OracleDbType.Int32).Value = id_fornecedor;
-                            cmd.Parameters.Add("v_cubagem", OracleDbType.Decimal).Value = cubagem;
-                            cmd.Parameters.Add("v_altura", OracleDbType.Decimal).Value = altura;
-                            cmd.Parameters.Add("v_largura", OracleDbType.Decimal).Value = largura;
-                            cmd.Parameters.Add("v_comprimento", OracleDbType.Decimal).Value = comprimento;
-                            cmd.Parameters.Add("v_codbar", OracleDbType.Varchar2).Value = codigo_barras;
-                            cmd.Parameters.Add("v_name", OracleDbType.Varchar2).Value = nome;
-                            cmd.Parameters.Add("v_status", OracleDbType.Varchar2).Value = status;
-                            cmd.Parameters.Add("v_desc", OracleDbType.Varchar2).Value = desc;
-                            cmd.Parameters.Add("v_und_med", OracleDbType.Varchar2).Value = und_m;
-                            cmd.Parameters.Add("v_pre_c", OracleDbType.Decimal).Value = preco_custo;
-                            cmd.Parameters.Add("v_porc_l", OracleDbType.Decimal).Value = margem_lucro;
-                            cmd.Parameters.Add("v_pre_f", OracleDbType.Decimal).Value = preco_venda;
-                            cmd.Parameters.Add("v_id_picking", OracleDbType.Int32).Value = id_end;
-                            cmd.Parameters.Add("v_quant_max", OracleDbType.Int32).Value = 999;
-                            cmd.ExecuteNonQuery();
-                            db.AddLog($"ITEM: {nome} | STATUS: {status} | CODBAR: {codigo_barras} | FOI CADASTRADO COM SUCESSO!", Util.id_user);
-                        }
-                        MessageBox.Show("Item gravado com sucesso!");
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@v_id_f", SqlDbType.Int).Value = id_fornecedor;
+                        cmd.Parameters.Add("@v_cubagem", SqlDbType.Decimal).Value = cubagem;
+                        cmd.Parameters.Add("@v_altura", SqlDbType.Decimal).Value = altura;
+                        cmd.Parameters.Add("@v_largura", SqlDbType.Decimal).Value = largura;
+                        cmd.Parameters.Add("@v_comprimento", SqlDbType.Decimal).Value = comprimento;
+                        cmd.Parameters.Add("@v_codbar", SqlDbType.VarChar, 15).Value = codigo_barras;
+                        cmd.Parameters.Add("@v_name", SqlDbType.VarChar, 100).Value = nome;
+                        cmd.Parameters.Add("@v_status", SqlDbType.VarChar, 15).Value = status;
+                        cmd.Parameters.Add("@v_desc", SqlDbType.VarChar, 255).Value = desc;
+                        cmd.Parameters.Add("@v_und_med", SqlDbType.VarChar, 5).Value = und_m;
+                        cmd.Parameters.Add("@v_pre_c", SqlDbType.Decimal).Value = preco_custo;
+                        cmd.Parameters.Add("@v_porc_l", SqlDbType.Decimal).Value = margem_lucro;
+                        cmd.Parameters.Add("@v_pre_f", SqlDbType.Decimal).Value = preco_venda;
+                        cmd.ExecuteNonQuery();
+                        //db.AddLog($"ITEM: {nome} | STATUS: {status} | CODBAR: {codigo_barras} | FOI CADASTRADO COM SUCESSO!", Util.id_user);
                     }
+                    MessageBox.Show("Item gravado com sucesso!");
+
                 }
             }
             catch (Exception ex)
@@ -389,7 +388,7 @@ namespace Vanilla
 
         public double CalculaMetrosCubicos(double altura, double largura, double comprimento)
         {
-            return ((altura /100) * (largura / 100) * (comprimento / 100));
+            return ((altura / 100) * (largura / 100) * (comprimento / 100));
         }
 
         public CadastrarItens RetornarItens(int id)
@@ -406,8 +405,8 @@ namespace Vanilla
                         {
                             if (reader.Read())
                             {
-                                
-                                return new CadastrarItens(Convert.ToInt32(reader["id"]), Convert.ToInt32(reader["id_f"]), reader["nome_fantasia"].ToString(), reader["nome"].ToString(), Convert.ToDecimal(reader["preco_custo"]), Convert.ToDecimal(reader["lucro"]), Convert.ToDecimal(reader["preco_final"]),reader["codbar"].ToString(), reader["status"].ToString(), reader["descri"].ToString(), reader["und_med"].ToString(), Convert.ToDecimal(reader["altura"]), Convert.ToDecimal(reader["largura"]),Convert.ToDecimal(reader["comprimento"]), Convert.ToDecimal(reader["cubagem_item"]));
+
+                                return new CadastrarItens(Convert.ToInt32(reader["id"]), Convert.ToInt32(reader["id_f"]), reader["nome_fantasia"].ToString(), reader["nome"].ToString(), Convert.ToDecimal(reader["preco_custo"]), Convert.ToDecimal(reader["lucro"]), Convert.ToDecimal(reader["preco_final"]), reader["codbar"].ToString(), reader["status"].ToString(), reader["descri"].ToString(), reader["und_med"].ToString(), Convert.ToDecimal(reader["altura"]), Convert.ToDecimal(reader["largura"]), Convert.ToDecimal(reader["comprimento"]), Convert.ToDecimal(reader["cubagem_item"]));
                             }
                             return new CadastrarItens();
                         }

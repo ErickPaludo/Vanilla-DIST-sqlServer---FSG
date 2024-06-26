@@ -209,14 +209,14 @@ namespace Vanilla
         {
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                using (SqlConnection connection = new SqlConnection(config.Lerdados()))
                 {
                     connection.Open();
-                    string query = $"Select * From vnl_cad_empresas where tipo_emp = 1 and status = 0";
+                    string query = $"Select * From dev.vnl_cad_empresas where tipo_emp = 1 and status = 0";
 
-                    using (OracleCommand cmd = new OracleCommand(query, connection))
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
                     {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())
                             {
@@ -377,15 +377,15 @@ namespace Vanilla
         {
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                using (SqlConnection connection = new SqlConnection(config.Lerdados()))
                 {
                     connection.Open();
-                    string query = $"Select Count(*) From vnl_itens where codbar = :Cod";
+                    string query = $"Select Count(*) From dev.vnl_itens where codbar = @Cod";
 
-                    using (OracleCommand cmd = new OracleCommand(query, connection))
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
                     {
 
-                        cmd.Parameters.Add(":Cod", cod);
+                        cmd.Parameters.Add(new SqlParameter("@Cod", cod));
                         int count = Convert.ToInt32(cmd.ExecuteScalar());
                         if (count != 0)
                         {

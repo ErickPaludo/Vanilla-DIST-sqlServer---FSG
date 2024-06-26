@@ -144,32 +144,27 @@ namespace Vanilla
         private void buttonGravar_Click(object sender, EventArgs e) //Grava o item
         {
             //Verifica os parametros
-            if (lic.VerificaLogin() == true)
+
+            if (!string.IsNullOrEmpty(TnomeItem.Text) && (!string.IsNullOrEmpty(TcodigoBarras.Text) && (!string.IsNullOrEmpty(comboStatus.Text) && (!string.IsNullOrEmpty(Lselectfornecedor.Text)) && (!string.IsNullOrEmpty(comboUMed.Text)) && (!string.IsNullOrEmpty(LprecoFinal.Text) && (!string.IsNullOrEmpty(Lcubagen.Text))))))
             {
-                if (!string.IsNullOrEmpty(TnomeItem.Text) && (!string.IsNullOrEmpty(TcodigoBarras.Text) && (!string.IsNullOrEmpty(comboStatus.Text) && (!string.IsNullOrEmpty(Lselectfornecedor.Text)) && (!string.IsNullOrEmpty(comboUMed.Text)) && (!string.IsNullOrEmpty(LprecoFinal.Text) && (!string.IsNullOrEmpty(Lcubagen.Text))))))
+                if (db.AntiCopy("id", "dev.vnl_itens", id_item.ToString()) == true)
                 {
-                    if (db.AntiCopy("id", "vnl_itens", id_item.ToString()) == true)
-                    {
-                        cad.CadastraItem(id_fornecedor, TcodigoBarras.Text, TnomeItem.Text, comboStatus.Text, TdescItem.Text, comboUMed.Text, Convert.ToDecimal(TprecoCusto.Text), Convert.ToDecimal(TporcentLucro.Text), (cad.CalculaPrecoFinal(Convert.ToDecimal(TprecoCusto.Text), (Convert.ToDecimal(TporcentLucro.Text)))), id_endereco, Convert.ToDouble(Lcubagen.Text), Convert.ToDouble(Taltura.Text), Convert.ToDouble(TLargura.Text), Convert.ToDouble(Tcomprimento.Text));
-                    }
-                    else
-                    {
-                        cad.EditaItens(id_item, id_fornecedor, TcodigoBarras.Text, TnomeItem.Text.ToString(), comboStatus.Text.ToString(), TdescItem.Text.ToString(), comboUMed.Text.ToString(), Convert.ToDecimal(TprecoCusto.Text), Convert.ToDecimal(TporcentLucro.Text), (cad.CalculaPrecoFinal(Convert.ToDecimal(TprecoCusto.Text), (Convert.ToDecimal(TporcentLucro.Text)))));
-                    }
-                    id_item = 0; //valor redefinido para zero pois caso contrario, um novo item sobreescreve um item j[a registrado
-                    id_fornecedor = 0;
-                    ClearCamp(); //Limpa toda interface
-                    ModifyElements(false); //Bloqueia interface ate que o user escolha o que deve ser feito
+                    cad.CadastraItem(id_fornecedor, TcodigoBarras.Text, TnomeItem.Text, comboStatus.Text, TdescItem.Text, comboUMed.Text, Convert.ToDecimal(TprecoCusto.Text), Convert.ToDecimal(TporcentLucro.Text), (cad.CalculaPrecoFinal(Convert.ToDecimal(TprecoCusto.Text), (Convert.ToDecimal(TporcentLucro.Text)))), id_endereco, Convert.ToDouble(Lcubagen.Text), Convert.ToDouble(Taltura.Text), Convert.ToDouble(TLargura.Text), Convert.ToDouble(Tcomprimento.Text));
                 }
                 else
                 {
-                    MessageBox.Show("Revise os campos!"); //Ocorre quando ha algum campo vazio
+                    cad.EditaItens(id_item, id_fornecedor, TcodigoBarras.Text, TnomeItem.Text.ToString(), comboStatus.Text.ToString(), TdescItem.Text.ToString(), comboUMed.Text.ToString(), Convert.ToDecimal(TprecoCusto.Text), Convert.ToDecimal(TporcentLucro.Text), (cad.CalculaPrecoFinal(Convert.ToDecimal(TprecoCusto.Text), (Convert.ToDecimal(TporcentLucro.Text)))));
                 }
+                id_item = 0; //valor redefinido para zero pois caso contrario, um novo item sobreescreve um item j[a registrado
+                id_fornecedor = 0;
+                ClearCamp(); //Limpa toda interface
+                ModifyElements(false); //Bloqueia interface ate que o user escolha o que deve ser feito
             }
             else
             {
-                Homepage home = new Homepage();
+                MessageBox.Show("Revise os campos!"); //Ocorre quando ha algum campo vazio
             }
+
         }
         private void codMaual_Click(object sender, EventArgs e)//habilita ou desabilita o cod de barras manual
         {
