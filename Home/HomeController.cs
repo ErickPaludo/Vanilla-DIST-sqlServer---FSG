@@ -41,7 +41,8 @@ namespace Vanilla
         }
         public void TrocarConta()
         {
-            db.Deslog(0);
+            LoginFront login = new LoginFront();
+            login.Show();
         }
         public void Sair()
         {

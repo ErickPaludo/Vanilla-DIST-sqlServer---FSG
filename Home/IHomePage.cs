@@ -19,10 +19,7 @@ namespace Vanilla
             get; set;
         }
 
-        ToolStripMenuItem Logoff
-        {
-            get; set;
-        }
+      
         ToolStripMenuItem Sair
         {
             get; set;

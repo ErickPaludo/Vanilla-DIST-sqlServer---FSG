@@ -39,7 +39,7 @@
             datefinal = new DateTimePicker();
             camppesq = new TextBox();
             search = new Button();
-            combouser = new ComboBox();
+            apagar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridLog).BeginInit();
             SuspendLayout();
             // 
@@ -132,23 +132,24 @@
             search.UseVisualStyleBackColor = true;
             search.Click += AtualizarViaBtn;
             // 
-            // combouser
+            // apagar
             // 
-            combouser.Cursor = Cursors.Hand;
-            combouser.DropDownStyle = ComboBoxStyle.DropDownList;
-            combouser.FormattingEnabled = true;
-            combouser.Items.AddRange(new object[] { "TODOS" });
-            combouser.Location = new Point(892, 15);
-            combouser.Name = "combouser";
-            combouser.Size = new Size(121, 23);
-            combouser.TabIndex = 20;
+            apagar.Cursor = Cursors.Hand;
+            apagar.Location = new Point(912, 12);
+            apagar.Name = "apagar";
+            apagar.Size = new Size(101, 23);
+            apagar.TabIndex = 20;
+            apagar.Text = "Apagar Logs";
+            apagar.UseVisualStyleBackColor = true;
+            apagar.Visible = false;
+            apagar.Click += apagar_Click;
             // 
             // Logs
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1025, 626);
-            Controls.Add(combouser);
+            Controls.Add(apagar);
             Controls.Add(camppesq);
             Controls.Add(search);
             Controls.Add(datefinal);
@@ -173,6 +174,6 @@
         private DataGridViewTextBoxColumn ColumnUser;
         private DataGridViewTextBoxColumn ColumnLog;
         private DataGridViewTextBoxColumn ColumnData;
-        private ComboBox combouser;
+        private Button apagar;
     }
 }

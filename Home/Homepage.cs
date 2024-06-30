@@ -59,17 +59,7 @@ namespace Vanilla
                 Salterauseradm = value;
             }
         }
-        public ToolStripMenuItem Logoff
-        {
-            get
-            {
-                return Slogout;
-            }
-            set
-            {
-                Slogout = value;
-            }
-        }
+       
         public ToolStripMenuItem Sair
         {
             get
@@ -167,6 +157,7 @@ namespace Vanilla
         private void TrocarConta(object sender, EventArgs e)
         {
             controller.TrocarConta();
+            this.Close();
         }
         private void Exit(object sender, EventArgs e)
         {
@@ -210,8 +201,8 @@ namespace Vanilla
             if (utilitarios.Permissao_user == 0)
             {
                 Salterauseradm.Visible = false;
-                //containerlabelcad.Visible = false;
-                // containercad.Visible = false;
+                containerlabelcad.Visible = false;
+                 containercad.Visible = false;
                 Badduser.Visible = false; 
             }
             Snameuser.Text = utilitarios.Nome_user;

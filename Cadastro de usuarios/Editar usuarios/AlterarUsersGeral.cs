@@ -107,7 +107,7 @@ namespace Vanilla
                 if (userBox.Text.Length >= 3)
                 {
 
-                    if (db.AntiCopy("user", "vnl_user", userBox.Text) == true)
+                    if (db.AntiCopy("user", "dev.vnl_user", userBox.Text) == true)
                     {
 
                         if (passBox.Text.Length >= 6 && confPassBox.Text.Length >= 6)

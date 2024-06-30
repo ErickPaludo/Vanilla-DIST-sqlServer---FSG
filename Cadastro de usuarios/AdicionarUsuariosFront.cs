@@ -31,15 +31,15 @@ namespace Vanilla
                 {
                     if (userBox.Text.Length >= 3)
                     {
-                        //db.AntiCopy("login", "vnl_user", userBox.Text) == 
-                        if (true)
+                     
+                        if (db.AntiCopy("login", "dev.vnl_user", userBox.Text))
                         {
                             if (passBox.Text.Length >= 6 && confPassBox.Text.Length >= 6)
                             {
                                 if (passBox.Text == confPassBox.Text)
                                 {
                                     usuarios.Adduser(nomeCompleto.Text, cpfText.Text, emailBox.Text, telfBox.Text, telfBox2.Text, comboPerm.Text, comboStatus.Text, userBox.Text, passBox.Text, encaminhar.Checked);
-                                   
+                                    this.Close();
                                 }
                                 else
                                 {
@@ -66,6 +66,7 @@ namespace Vanilla
                 {
                     MessageBox.Show("Favor verificar os campos novamente!");
                 }
+              
             }
             else
             {

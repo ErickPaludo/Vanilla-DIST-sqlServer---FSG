@@ -94,6 +94,7 @@ namespace Vanilla
                         using (SqlCommand cmd = new SqlCommand("dev.vnl_ins_user", connection))
                         {
                             cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                            cmd.Parameters.Add("@id_user", SqlDbType.Int).Value = Util.id_user;
                             cmd.Parameters.Add(new SqlParameter("@v_nome", nome));
                             cmd.Parameters.Add(new SqlParameter("@v_cpf", cpf));
                             cmd.Parameters.Add(new SqlParameter("@v_email", email));
@@ -130,30 +131,27 @@ namespace Vanilla
         {
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                using (SqlConnection connection = new SqlConnection(config.Lerdados()))
                 {
                     connection.Open();
-                    using (OracleTransaction transaction = connection.BeginTransaction())
-                    {
-                        using (OracleCommand cmd = new OracleCommand("vnl_pkg_users.vnl_edit_useradm", connection))
+                 
+                        using (SqlCommand cmd = new SqlCommand("dev.vnl_edit_useradm", connection))
                         {
                             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            cmd.Parameters.Add("v_id", OracleDbType.Int32).Value = id;
-                            cmd.Parameters.Add("v_nome", OracleDbType.Varchar2).Value = nome;
+                        cmd.Parameters.Add("@id_user", SqlDbType.Int).Value = Util.id_user;
+                        cmd.Parameters.Add("v_id", SqlDbType.Int).Value = id;
+                            cmd.Parameters.Add("v_nome", SqlDbType.VarChar).Value = nome;
                             ;
-                            cmd.Parameters.Add("v_email", OracleDbType.Varchar2).Value = email;
-                            cmd.Parameters.Add("v_tel", OracleDbType.Varchar2).Value = tel;
-                            cmd.Parameters.Add("v_tel_2", OracleDbType.Varchar2).Value = tel2;
-                            cmd.Parameters.Add("v_perm", OracleDbType.Varchar2).Value = perm;
-                            cmd.Parameters.Add("v_status", OracleDbType.Varchar2).Value = status;
-                            cmd.Parameters.Add("v_login", OracleDbType.Varchar2).Value = login;
-                            cmd.Parameters.Add("v_pass", OracleDbType.Varchar2).Value = pass;
+                            cmd.Parameters.Add("v_email", SqlDbType.VarChar).Value = email;
+                            cmd.Parameters.Add("v_tel", SqlDbType.VarChar).Value = tel;
+                            cmd.Parameters.Add("v_tel_2", SqlDbType.VarChar).Value = tel2;
+                            cmd.Parameters.Add("v_perm", SqlDbType.VarChar).Value = perm;
+                            cmd.Parameters.Add("v_status", SqlDbType.VarChar).Value = status;
+                            cmd.Parameters.Add("v_login", SqlDbType.VarChar).Value = login;
+                            cmd.Parameters.Add("v_pass", SqlDbType.VarChar).Value = pass;
                             cmd.ExecuteNonQuery();
-                            db.AddLog($"USUARIO: {login} | ID: {id} | PERMISSAO: {perm} | STATUS: {status} | FOI EDITADO COM SUCESSO!", Util.id_user);
-                        }
-                        MessageBox.Show("Usuário gravado com sucesso!");
-                    }
-
+                        connection.Close();
+                        }                      
                 }
             }
             catch (Exception ex)

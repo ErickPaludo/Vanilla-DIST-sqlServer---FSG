@@ -36,7 +36,6 @@
             menuStrip1 = new MenuStrip();
             Snameuser = new ToolStripMenuItem();
             Salterauseradm = new ToolStripMenuItem();
-            Slogout = new ToolStripMenuItem();
             Sexit = new ToolStripMenuItem();
             Bvisualizaemp = new Button();
             toolTip1 = new ToolTip(components);
@@ -127,7 +126,7 @@
             // 
             // Snameuser
             // 
-            Snameuser.DropDownItems.AddRange(new ToolStripItem[] { Salterauseradm, Slogout, Sexit });
+            Snameuser.DropDownItems.AddRange(new ToolStripItem[] { Salterauseradm, Sexit });
             Snameuser.ForeColor = SystemColors.ButtonHighlight;
             Snameuser.Name = "Snameuser";
             Snameuser.Size = new Size(59, 20);
@@ -141,15 +140,6 @@
             Salterauseradm.Size = new Size(193, 22);
             Salterauseradm.Text = "Alterar outros usuários";
             Salterauseradm.Click += AlterarQualqueruser;
-            // 
-            // Slogout
-            // 
-            Slogout.BackColor = Color.DarkSlateBlue;
-            Slogout.ForeColor = SystemColors.ButtonHighlight;
-            Slogout.Name = "Slogout";
-            Slogout.Size = new Size(193, 22);
-            Slogout.Text = "Trocar de Conta";
-            Slogout.Click += TrocarConta;
             // 
             // Sexit
             // 
@@ -332,7 +322,6 @@
         private Button Badduser;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem Snameuser;
-        private ToolStripMenuItem Slogout;
         private ToolStripMenuItem Sexit;
         private ToolStripMenuItem Salterauseradm;
         private Button Bvisualizaemp;

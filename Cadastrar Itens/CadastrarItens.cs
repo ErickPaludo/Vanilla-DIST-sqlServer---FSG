@@ -1,6 +1,7 @@
 ﻿using Oracle.ManagedDataAccess.Client;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace Vanilla
 {
@@ -225,7 +226,21 @@ namespace Vanilla
             this.comprimento = comprimento;
             this.cubagem = cubagem;
         }
-
+        public CadastrarItens(int id_item, int id_fornec, string nome_item, decimal preco_custo, decimal lucro_porcent, decimal preco_final , string status_conv, string descricao, string unmed, decimal altura, decimal largura, decimal comprimento, decimal cubagem) : base(id_fornec)
+        {
+            this.nome_item = nome_item;
+            this.id_item = id_item;
+            this.preco_custo = preco_custo;
+            this.lucro_porcent = lucro_porcent;
+            this.preco_final = preco_final;
+            this.status_conv = status_conv;
+            this.descricao = descricao;
+            this.unmed = unmed;
+            this.altura = altura;
+            this.largura = largura;
+            this.comprimento = comprimento;
+            this.cubagem = cubagem;
+        }
         public CadastrarItens(int id, string name, int quant) // contrutor da lista de fornecedores de itens
         {
             this.id_item = id;
@@ -273,6 +288,7 @@ namespace Vanilla
                     using (SqlCommand cmd = new SqlCommand("dev.vnl_ins_item", connection))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@id_user", SqlDbType.Int).Value = Util.id_user;
                         cmd.Parameters.Add("@v_id_f", SqlDbType.Int).Value = id_fornecedor;
                         cmd.Parameters.Add("@v_cubagem", SqlDbType.Decimal).Value = cubagem;
                         cmd.Parameters.Add("@v_altura", SqlDbType.Decimal).Value = altura;
@@ -299,32 +315,37 @@ namespace Vanilla
             }
         }
 
-        public void EditaItens(int id_principal, int id_fornecedor, string cod, string nome, string status, string desc, string und_m, decimal preco_custo, decimal margem_lucro, decimal preco_venda) //Grava no banco de dados
-        {
+        public void EditaItens(CadastrarItens item) //Grava no banco de dados
+                    {
             try
             {
-                using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+                using (SqlConnection connection = new SqlConnection(config.Lerdados()))
                 {
                     connection.Open();
-                    using (OracleTransaction transaction = connection.BeginTransaction())
-                    {
-                        using (OracleCommand cmd = new OracleCommand("vnl_pkg_itens.vnl_edit_item", connection))
+                  
+                        using (SqlCommand cmd = new SqlCommand("dev.vnl_edit_item", connection))
                         {
-                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                            cmd.Parameters.Add("v_id", OracleDbType.Int32).Value = id_principal;
-                            cmd.Parameters.Add("v_id_f", OracleDbType.Int32).Value = id_fornecedor;
-                            cmd.Parameters.Add("v_name", OracleDbType.Varchar2).Value = nome;
-                            cmd.Parameters.Add("v_status", OracleDbType.Varchar2).Value = status;
-                            cmd.Parameters.Add("v_desc", OracleDbType.Varchar2).Value = desc;
-                            cmd.Parameters.Add("v_und_med", OracleDbType.Varchar2).Value = und_m;
-                            cmd.Parameters.Add("v_pre_c", OracleDbType.Decimal).Value = preco_custo;
-                            cmd.Parameters.Add("v_porc_l", OracleDbType.Decimal).Value = margem_lucro;
-                            cmd.Parameters.Add("v_pre_f", OracleDbType.Decimal).Value = preco_final;
+                            cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@id_user", SqlDbType.Int).Value = Util.id_user;
+                        cmd.Parameters.Add(new SqlParameter("@v_id", SqlDbType.Int)).Value = item.id_item;
+                            cmd.Parameters.Add(new SqlParameter("@v_id_f", SqlDbType.Int)).Value = item.Id;
+                            cmd.Parameters.Add(new SqlParameter("@v_name", SqlDbType.VarChar)).Value = item.nome_item;
+                            cmd.Parameters.Add(new SqlParameter("@v_status", SqlDbType.VarChar)).Value = item.status;
+                            cmd.Parameters.Add(new SqlParameter("@v_desc", SqlDbType.VarChar)).Value = item.descricao;
+                            cmd.Parameters.Add(new SqlParameter("@v_und_med", SqlDbType.VarChar)).Value = item.unmed;
+                            cmd.Parameters.Add(new SqlParameter("@v_pre_c", SqlDbType.Decimal)).Value = item.preco_custo;
+                            cmd.Parameters.Add(new SqlParameter("@v_porc_l", SqlDbType.Decimal)).Value = item.lucro_porcent;
+                            cmd.Parameters.Add(new SqlParameter("@v_pre_f", SqlDbType.Decimal)).Value = item.preco_final;
+                            cmd.Parameters.Add(new SqlParameter("@v_altura", SqlDbType.Decimal)).Value = item.altura;
+                            cmd.Parameters.Add(new SqlParameter("@v_largura", SqlDbType.Decimal)).Value = item.largura;
+                            cmd.Parameters.Add(new SqlParameter("@v_comprimento", SqlDbType.Decimal)).Value = item.comprimento;
+                            cmd.Parameters.Add(new SqlParameter("@v_cubagem", item.cubagem));
+
                             cmd.ExecuteNonQuery();
-                            db.AddLog($"ITEM: {nome} | STATUS: {status} | CODBAR: {cod} | FOI EDITADO COM SUCESSO!", Util.id_user);
+
+                            MessageBox.Show("Item gravado com sucesso!");
                         }
-                        MessageBox.Show("Item gravado com sucesso!");
-                    }
+                    connection.Close();
                 }
             }
             catch (Exception ex)
@@ -395,19 +416,19 @@ namespace Vanilla
         public CadastrarItens RetornarItens(int id)
         {
 
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            using (SqlConnection connection = new SqlConnection(config.Lerdados()))
             {
                 try
                 {
                     connection.Open();
-                    using (OracleCommand cmd = new OracleCommand($"select * from view_itens where id = {id}", connection))
+                    using (SqlCommand cmd = new SqlCommand($"select * from dev.view_itens where id = {id}", connection))
                     {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             if (reader.Read())
                             {
 
-                                return new CadastrarItens(Convert.ToInt32(reader["id"]), Convert.ToInt32(reader["id_f"]), reader["nome_fantasia"].ToString(), reader["nome"].ToString(), Convert.ToDecimal(reader["preco_custo"]), Convert.ToDecimal(reader["lucro"]), Convert.ToDecimal(reader["preco_final"]), reader["codbar"].ToString(), reader["status"].ToString(), reader["descri"].ToString(), reader["und_med"].ToString(), Convert.ToDecimal(reader["altura"]), Convert.ToDecimal(reader["largura"]), Convert.ToDecimal(reader["comprimento"]), Convert.ToDecimal(reader["cubagem_item"]));
+                                return new CadastrarItens(Convert.ToInt32(reader["id"]), Convert.ToInt32(reader["id_f"]), reader["nome_fantasia"].ToString(), reader["nome"].ToString(), Convert.ToDecimal(reader["preco_custo"]), Convert.ToDecimal(reader["lucro"]), Convert.ToDecimal(reader["preco_final"]), reader["codbar"].ToString(), reader["status"].ToString(), reader["descri"].ToString(), reader["und_med"].ToString(), Convert.ToDecimal(reader["altura"]), Convert.ToDecimal(reader["largura"]), Convert.ToDecimal(reader["comprimento"]), Convert.ToDecimal(reader["cubagem"]));
                             }
                             return new CadastrarItens();
                         }

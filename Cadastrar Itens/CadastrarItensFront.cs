@@ -72,7 +72,7 @@ namespace Vanilla
             Bcancelar.Enabled = type;
             Bsalvararquivo.Enabled = type;
             Bimprimir.Enabled = type;
-            Bselectend.Enabled = type;
+          //  Bselectend.Enabled = type;
             dataGridFornecedores.Enabled = type;
             Lcubagen.Enabled = type;
         }
@@ -153,7 +153,12 @@ namespace Vanilla
                 }
                 else
                 {
-                    cad.EditaItens(id_item, id_fornecedor, TcodigoBarras.Text, TnomeItem.Text.ToString(), comboStatus.Text.ToString(), TdescItem.Text.ToString(), comboUMed.Text.ToString(), Convert.ToDecimal(TprecoCusto.Text), Convert.ToDecimal(TporcentLucro.Text), (cad.CalculaPrecoFinal(Convert.ToDecimal(TprecoCusto.Text), (Convert.ToDecimal(TporcentLucro.Text)))));
+                    decimal final = cad.CalculaPrecoFinal(Convert.ToDecimal(TprecoCusto.Text), (Convert.ToDecimal(TporcentLucro.Text)));
+
+                    cad.EditaItens(new CadastrarItens(id_item, id_fornecedor, TnomeItem.Text.ToString(), Convert.ToDecimal(TprecoCusto.Text), Convert.ToDecimal(TporcentLucro.Text), final, comboStatus.Text.ToString(), TdescItem.Text.ToString(), comboUMed.Text.ToString(), Convert.ToDecimal(Taltura.Text), Convert.ToDecimal(TLargura.Text), Convert.ToDecimal(Tcomprimento.Text), Convert.ToDecimal(Lcubagen.Text)));
+
+
+                  
                 }
                 id_item = 0; //valor redefinido para zero pois caso contrario, um novo item sobreescreve um item j[a registrado
                 id_fornecedor = 0;
@@ -236,21 +241,22 @@ namespace Vanilla
             Snovoitem.Enabled = false;
             SeditarItem.Enabled = false;
             CcodMaual.Enabled = false;
-            Bselectend.Enabled = false;
-            Lcubagen.Enabled = false;
-            Taltura.Enabled = false;
-            Tcomprimento.Enabled = false;
-            TLargura.Enabled = false;
-            Lenderecoselecionado.Text = string.Empty;
+            //Bselectend.Enabled = false;
+            Lcubagen.Enabled = true;
+            Taltura.Enabled = true;
+            Tcomprimento.Enabled = true;
+            TLargura.Enabled = true;
+           // Lenderecoselecionado.Text = string.Empty;
             TabelaItens itens = new TabelaItens(true); //chama a tabela itens
             itens.AtualizarItens(); //atualiza a tabela antes de abrir
             itens.ShowDialog();
 
 
-            CadastrarItens r_item;
-            r_item = cad.RetornarItens(id_item);
+    
+            CadastrarItens r_item = cad.RetornarItens(id_item);
             if (id_item != 0)
             {
+                id_fornecedor = r_item.Id;
                 TnomeItem.Text = r_item.Nome_item;
                 TdescItem.Text = r_item.Descricao;
                 TcodigoBarras.Text = r_item.Codbar;
@@ -395,7 +401,7 @@ namespace Vanilla
             TabelaEnderecos tbend = new TabelaEnderecos();
             tbend.ModoDeRetorno(1);
             tbend.ShowDialog();
-            Lenderecoselecionado.Text = endereco;
+            //Lenderecoselecionado.Text = endereco;
         }
 
         private void CadastrarItensFront_Load(object sender, EventArgs e)

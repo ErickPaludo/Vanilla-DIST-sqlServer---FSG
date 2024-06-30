@@ -30,30 +30,30 @@ namespace Vanilla
         {
             LicencasLogin login = new LicencasLogin();
             login.Ativo = false;
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
-            {
-                try
-                {
-                    connection.Open();
-                    using (OracleCommand cmd = new OracleCommand("vnl_pkg_users.vnl_deslog", connection))
-                    {
-                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        util = new Util();
-                        ;
-                        if (id == 0)
-                        {
-                            id = Util.id_user;
-                        }
-                        cmd.Parameters.Add("v_id", OracleDbType.Int16).Value = id;
-                        cmd.ExecuteNonQuery();
-                        AddLog("USUÁRIO DESLOGADO!", id); //temporário
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            //using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            //{
+            //    try
+            //    {
+            //        connection.Open();
+            //        using (OracleCommand cmd = new OracleCommand("vnl_pkg_users.vnl_deslog", connection))
+            //        {
+            //            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            //            util = new Util();
+            //            ;
+            //            if (id == 0)
+            //            {
+            //                id = Util.id_user;
+            //            }
+            //            cmd.Parameters.Add("v_id", OracleDbType.Int16).Value = id;
+            //            cmd.ExecuteNonQuery();
+            //            AddLog("USUÁRIO DESLOGADO!", id); //temporário
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.Message, "Houve um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
         }
         public bool StatusConfigBank(string endereco)//Verifica se a conexão com o banco está funcionando corretamente para a configurãção do banco da aplicação
         {
@@ -284,15 +284,15 @@ namespace Vanilla
         public void RetornaUsuarios()
         {
 
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            using (SqlConnection connection = new SqlConnection(config.Lerdados()))
             {
                 Logs log = new Logs();
                 try
                 {
                     connection.Open();
-                    using (OracleCommand cmd = new OracleCommand("Select login from vnl_user", connection))
+                    using (SqlCommand cmd = new SqlCommand("Select login from dev.vnl_user", connection))
                     {
-                        using (OracleDataReader reader = cmd.ExecuteReader())
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
 
                             while (reader.Read())
@@ -310,33 +310,38 @@ namespace Vanilla
             }
         }
 
-        public void RetornaLogs(string user, string ocorrencia, DateTime data_ini, DateTime data_fin)
+        public void RetornaLogs(string ocorrencia, DateTime data_ini, DateTime data_fin)
         {
 
-            using (OracleConnection connection = new OracleConnection(config.Lerdados()))
+            using (SqlConnection connection = new SqlConnection(config.Lerdados()))
             {
                 Logs log = new Logs();
                 try
                 {
                     connection.Open();
-                    using (OracleCommand cmd = new OracleCommand("vnl_prc_filtro_logs", connection))
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM dev.view_logs WHERE msg LIKE '%' + @ocorrencia + '%' AND data_ocorrencia BETWEEN @data_ini AND @data_fin;", connection))
                     {
                         DateTime dataFinal = new DateTime(data_fin.Year, data_fin.Month, data_fin.Day, 23, 59, 59);
-                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        cmd.Parameters.Add("v_name_user", OracleDbType.Varchar2).Value = user;
-                        cmd.Parameters.Add("v_ocorrencia", OracleDbType.Varchar2).Value = ocorrencia;
-                        cmd.Parameters.Add("v_data_ini", OracleDbType.Date).Value = data_ini;
-                        cmd.Parameters.Add("v_data_fin", OracleDbType.Date).Value = dataFinal;
 
-                        cmd.Parameters.Add("r_info", OracleDbType.RefCursor, ParameterDirection.Output);
-                        using (OracleDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
+                        cmd.Parameters.AddWithValue("@ocorrencia", ocorrencia);
+                        cmd.Parameters.AddWithValue("@data_ini", data_ini);
+                        cmd.Parameters.AddWithValue("@data_fin", dataFinal);
+
+                        
+                            using (SqlDataReader reader = cmd.ExecuteReader())
                             {
-                                log.DadosnaLista(Convert.ToInt16(reader.GetString(0)), reader.GetString(1).ToString(), Convert.ToDateTime(reader.GetDateTime(2)), Convert.ToInt16(reader.GetString(3)), reader.GetString(4).ToString());
+                                while (reader.Read())
+                                {
+                                    int id = reader.GetInt32(reader.GetOrdinal("id"));
+                                    int id_user = reader.GetInt32(reader.GetOrdinal("id_user"));
+                                    string msg = reader.GetString(reader.GetOrdinal("msg"));
+                                    DateTime dataOcorrencia = reader.GetDateTime(reader.GetOrdinal("data_ocorrencia"));
+                                    string login = reader.GetString(reader.GetOrdinal("login"));
 
+                                    log.DadosnaLista(id, msg, dataOcorrencia, id_user, login);
+                                }
                             }
-                        }
+                        
                     }
                 }
                 catch (Exception ex)
@@ -406,6 +411,6 @@ namespace Vanilla
             }
         }
 
-     
+
     }
 }
